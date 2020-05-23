@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:carousel_pro/carousel_pro.dart';
@@ -8,7 +10,9 @@ import './auth/auth.dart';
 import './auth/register.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    home: SplashScreen(),
+  ));
 }
 
 
@@ -198,6 +202,88 @@ class _MyAppState extends State<MyApp> {
   }
 }*/
 
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 2),  (){
+      print("Hii");
+      runApp(MaterialApp(home: MyHomePage(title: 'Firebase Auth Demo')));
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(color: Colors.green),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 100,
+                      child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Image(
+                          image: AssetImage('images/logomain.png'),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Text('OPEN UPES',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                    ),),
+                  ],
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircularProgressIndicator(
+                      backgroundColor: Colors.white,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                    ),
+                    Text('Aware | Adopt | Contribute',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                      ),),
+                  ],
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
 
 
 class MyHomePage extends StatefulWidget {
@@ -220,14 +306,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Container(
-            child: RaisedButton(
-              child: const Text('Test registration'),
-              onPressed: () => _pushPage(context, RegisterPage()),
-            ),
-            padding: const EdgeInsets.all(16),
-            alignment: Alignment.center,
-          ),
           Container(
             child: RaisedButton(
               child: const Text('Test SignIn/SignOut'),
