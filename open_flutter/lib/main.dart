@@ -215,7 +215,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 2),  (){
       print("Hii");
-      runApp(MaterialApp(home: MyHomePage(title: 'Firebase Auth Demo')));
+     // runApp(MaterialApp(home: MyHomePage(title: 'Firebase Auth Demo')));
+      runApp(MaterialApp(home: MainNavDrawer()));
     });
   }
 
@@ -322,6 +323,177 @@ class _MyHomePageState extends State<MyHomePage> {
   void _pushPage(BuildContext context, Widget page) {
     Navigator.of(context).push(
       MaterialPageRoute<void>(builder: (_) => page),
+    );
+  }
+}
+
+
+class MainNavDrawer extends StatefulWidget {
+  @override
+  _MainNavDrawerState createState() => _MainNavDrawerState();
+}
+
+class _MainNavDrawerState extends State<MainNavDrawer> {
+
+  Drawer appToolbar(){
+    return Drawer(
+      child: ListView(
+        children: <Widget>[
+          Container(
+            color: Colors.green,
+            height: 150,
+            child: Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 50,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Image(
+                        image: AssetImage('images/logomain.png'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          _createDrawerItem(icon: Icons.home,text: 'Home',),
+          _createDrawerItem(icon: Icons.photo,text: 'Gallery',),
+          _createDrawerItem(icon: Icons.info,text: 'About Us',),
+          _createDrawerItem(icon: Icons.remove_red_eye,text: 'Our Vision',),
+
+        ],
+      ),
+    );
+  }
+
+  Widget _createDrawerItem(
+      {IconData icon, String text, GestureTapCallback onTap}) {
+    return ListTile(
+      title: Row(
+        children: <Widget>[
+          Icon(icon),
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(text),
+          )
+        ],
+      ),
+      onTap: onTap,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('OPEN UPES'),
+        backgroundColor: Colors.green,
+      ),
+      drawer: appToolbar(),
+      body: HomeContent(),
+    );
+  }
+}
+
+class HomeContent extends StatefulWidget {
+  @override
+  _HomeContentState createState() => _HomeContentState();
+}
+
+class _HomeContentState extends State<HomeContent> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        SizedBox(
+            height: 200.0,
+            child: Carousel(
+              images: [
+                Image(
+                  image: NetworkImage('https://www.upesopen.org/b.png'),
+                  fit: BoxFit.fill,
+                ),
+                NetworkImage('https://www.upesopen.org/b.png'),
+                NetworkImage('https://www.upesopen.org/b.png'),
+                NetworkImage('https://www.upesopen.org/b.png'),
+                // ExactAssetImage("assets/images/LaunchImage.jpg")
+              ],
+              dotSize: 4.0,
+              dotSpacing: 15.0,
+              dotColor: Colors.lightGreenAccent,
+              indicatorBgPadding: 5.0,
+              dotBgColor: Colors.purple.withOpacity(0.0),
+              borderRadius: true,
+              moveIndicatorFromBottom: 180.0,
+              noRadiusForIndicator: true,
+            )
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: Expanded(
+            child: Column(
+              children: <Widget>[
+                  Image.asset('images/logomain.png', height: 150,),
+                Text('In association with :',
+                style: defaultTextStyle(20),),
+                Padding(
+                  padding: EdgeInsets.only(left: 10, right: 10 , top: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Expanded(
+                          child: Image.asset('images/linuxfoundation.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                          child: Image.asset('images/ibm.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                          child: Image.asset('images/techmint.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                          child: Image.asset('images/upes.png')),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                          child: Image.asset('images/xebia.png')),
+
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Text('AWARE | ADOPT | CONTRIBUTE',
+                  style: defaultTextStyle(25),
+                  textAlign: TextAlign.center,),
+                ),
+                RaisedButton(
+                  color: Colors.green,
+                  elevation: 5,
+                  splashColor: Colors.yellow[200],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text('Member Login', style: TextStyle(
+                    color: Colors.white
+                  ),),
+                ),
+            ],
+            ),
+          ),
+        ),
+      ]
     );
   }
 }
