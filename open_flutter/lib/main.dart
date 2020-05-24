@@ -16,7 +16,7 @@ import 'OurVision.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-void onTapToolbar(int n , BuildContext context ) {
+void onTapToolbar(int n, BuildContext context) {
   if (n == 1) {
     if (context.toString().contains('MainNavDrawer')) {
       print('Already There');
@@ -71,17 +71,28 @@ Drawer appToolbar(BuildContext context) {
             ),
           ),
         ),
-        createDrawerItem(icon: Icons.home, text: 'Home', n: 1 , context: context),
-        createDrawerItem(icon: Icons.photo, text: 'Gallery', n: 2 , context: context) ,
-        createDrawerItem(icon: Icons.info, text: 'About Us', n: 3 , context: context),
-        createDrawerItem(icon: Icons.remove_red_eye, text: 'Our Vision', n: 4 , context: context),
+        createDrawerItem(
+            icon: Icons.home, text: 'Home', n: 1, context: context),
+        createDrawerItem(
+            icon: Icons.photo, text: 'Gallery', n: 2, context: context),
+        createDrawerItem(
+            icon: Icons.info, text: 'About Us', n: 3, context: context),
+        createDrawerItem(
+            icon: Icons.remove_red_eye,
+            text: 'Our Vision',
+            n: 4,
+            context: context),
       ],
     ),
   );
 }
 
 Widget createDrawerItem(
-    {IconData icon, String text, GestureTapCallback onTap, int n , BuildContext context}) {
+    {IconData icon,
+    String text,
+    GestureTapCallback onTap,
+    int n,
+    BuildContext context}) {
   return ListTile(
     title: Row(
       children: <Widget>[
@@ -93,30 +104,29 @@ Widget createDrawerItem(
       ],
     ),
     onTap: () {
-      onTapToolbar(n,context);
+      onTapToolbar(n, context);
     },
   );
 }
 
-
-Image carouselImg(String url){
+Image carouselImg(String url) {
   return Image(
     image: NetworkImage(url),
     fit: BoxFit.fitHeight,
-    loadingBuilder: (BuildContext context, Widget child,ImageChunkEvent loadingProgress) {
+    loadingBuilder:
+        (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
       if (loadingProgress == null) return child;
       return Center(
         child: CircularProgressIndicator(
-          value: loadingProgress.expectedTotalBytes != null ?
-          loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
+          value: loadingProgress.expectedTotalBytes != null
+              ? loadingProgress.cumulativeBytesLoaded /
+                  loadingProgress.expectedTotalBytes
               : null,
         ),
       );
     },
   );
 }
-
-
 
 void main() {
   runApp(MaterialApp(
@@ -464,7 +474,6 @@ class MainNavDrawer extends StatefulWidget {
 }
 
 class _MainNavDrawerState extends State<MainNavDrawer> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -477,9 +486,6 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
     );
   }
 }
-
-
-
 
 class HomeContent extends StatefulWidget {
   @override
@@ -500,7 +506,6 @@ class _HomeContentState extends State<HomeContent> {
         : null);
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -578,7 +583,7 @@ class _HomeContentState extends State<HomeContent> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 10),
+              padding: EdgeInsets.only(top: 20, bottom: 20),
               child: RaisedButton(
                 onPressed: () {
                   onClickButton(!isLoggedIn);
@@ -591,6 +596,36 @@ class _HomeContentState extends State<HomeContent> {
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.only(left: 10 , right: 10 , bottom: 10),
+                width: double.infinity,
+                color: Colors.green,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Our Mission',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Text(
+                        'OPEN is a platform from where UPES shall make its presence felt in Global Open Source Fraternity. For this, we approached various global IT giants and organizations of repute for support and we were lucky that anyone we contacted promised us support.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
@@ -610,20 +645,19 @@ class _HomeContentState extends State<HomeContent> {
   }
 }
 
-
-
 class Gallery extends StatefulWidget {
   @override
   _GalleryState createState() => _GalleryState();
 }
 
-
 class _GalleryState extends State<Gallery> {
-  List<GalleryItem> galleryItems = [GalleryItem('http://18.197.247.183/g4.jpg'),
+  List<GalleryItem> galleryItems = [
+    GalleryItem('http://18.197.247.183/g4.jpg'),
     GalleryItem('http://18.197.247.183/g5.jpg'),
     GalleryItem('http://18.197.247.183/image12.jpeg'),
     GalleryItem('http://18.197.247.183/academy-logo.svg'),
-    GalleryItem('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ04pvROSjJDp6jLkqFWpapfdxh2WmcSmIIZC-LSDPTjYRGatJR&usqp=CAU')
+    GalleryItem(
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ04pvROSjJDp6jLkqFWpapfdxh2WmcSmIIZC-LSDPTjYRGatJR&usqp=CAU')
   ];
 
   String rtName = '/gallery';
@@ -640,15 +674,14 @@ class _GalleryState extends State<Gallery> {
 
   @override
   Widget build(BuildContext context) {
-
     return WillPopScope(
-      onWillPop: (){
-        if(galleryPageOpen) {
+      onWillPop: () {
+        if (galleryPageOpen) {
           Navigator.pushReplacementNamed(context, _GalleryState().rtName);
-        }else{
+        } else {
           Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
         }
-        },
+      },
       child: MaterialApp(
         home: Scaffold(
           body: display,
@@ -662,13 +695,13 @@ class _GalleryState extends State<Gallery> {
     );
   }
 
-  Container galleryPage(){
+  Container galleryPage() {
     galleryPageOpen = false;
     return Container(
       child: ListView.builder(
         itemBuilder: (context, position) {
           return GestureDetector(
-            onTap: (){
+            onTap: () {
               setState(() {
                 display = galleryCont(position);
                 print(position);
@@ -682,31 +715,29 @@ class _GalleryState extends State<Gallery> {
           );
         },
         itemCount: galleryItems.length,
-
       ),
     );
   }
 
-
-  Container galleryCont(int index){
+  Container galleryCont(int index) {
     galleryPageOpen = true;
     return Container(
-            child: Column(
-              children: <Widget>[Expanded(
-                child: Image(
-                  fit: BoxFit.fitWidth,
-                  image: NetworkImage(galleryItems[index].image),
-                ),
-              ),],
-            )
-        );
+        child: Column(
+      children: <Widget>[
+        Expanded(
+          child: Image(
+            fit: BoxFit.fitWidth,
+            image: NetworkImage(galleryItems[index].image),
+          ),
+        ),
+      ],
+    ));
   }
 }
 
 class GalleryItem {
   String image;
-  GalleryItem(String url){
+  GalleryItem(String url) {
     image = url;
   }
-
 }

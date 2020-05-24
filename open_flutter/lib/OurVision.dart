@@ -28,6 +28,8 @@ class _OurVisionState extends State<OurVision> {
       children: <Widget>[
         carouselImg('https://www.upesopen.org/img/mission.png'),
         Card(
+          margin: EdgeInsets.all(10),
+          color: Colors.green,
           elevation: 5,
           child: Column(
             children: <Widget>[
@@ -41,7 +43,7 @@ class _OurVisionState extends State<OurVision> {
               Container(
                 margin: EdgeInsets.only(left: 20 , right: 20),
                 height: 1,
-                color: Colors.grey,
+                color: Colors.yellow,
               ),
 
               Container(
