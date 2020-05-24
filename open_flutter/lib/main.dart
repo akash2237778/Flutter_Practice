@@ -9,9 +9,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import './auth/auth.dart';
 import './auth/register.dart';
 
+
 void main() {
   runApp(MaterialApp(
-    home: SplashScreen(),
+    home: MyApp(),
   ));
 }
 
@@ -216,7 +217,18 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 2),  (){
       print("Hii");
      // runApp(MaterialApp(home: MyHomePage(title: 'Firebase Auth Demo')));
-      runApp(MaterialApp(home: MainNavDrawer()));
+      runApp(MaterialApp(home: MainNavDrawer(),
+          theme: new ThemeData(
+             // primaryColor: Color(0XFF212845),
+              //scaffoldBackgroundColor: Color(0XFF212845),
+              primarySwatch: Colors.yellow,
+              buttonColor: Colors.green,
+              textTheme:  TextTheme(
+                  button: TextStyle(
+                      color: Colors.green, // This is not working.
+                      //fontSize: 30.0,
+                  )
+              ))));
     });
   }
 
@@ -406,6 +418,8 @@ class HomeContent extends StatefulWidget {
 }
 
 class _HomeContentState extends State<HomeContent> {
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -433,67 +447,65 @@ class _HomeContentState extends State<HomeContent> {
               noRadiusForIndicator: true,
             )
         ),
-        Padding(
-          padding: EdgeInsets.only(top: 10),
-          child: Expanded(
-            child: Column(
-              children: <Widget>[
-                  Image.asset('images/logomain.png', height: 150,),
-                Text('In association with :',
-                style: defaultTextStyle(20),),
-                Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10 , top: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                          child: Image.asset('images/linuxfoundation.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                          child: Image.asset('images/ibm.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                          child: Image.asset('images/techmint.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                          child: Image.asset('images/upes.png')),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                          child: Image.asset('images/xebia.png')),
+        Column(
+          children: <Widget>[
+            SizedBox(height: 10,),
+              Image.asset('images/logomain.png', height: 150,),
+            Text('In association with :',
+            style: defaultTextStyle(20),),
+            Padding(
+              padding: EdgeInsets.only(left: 10, right: 10 , top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                      child: Image.asset('images/linuxfoundation.png')),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: Image.asset('images/ibm.png')),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: Image.asset('images/techmint.png')),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: Image.asset('images/upes.png')),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                      child: Image.asset('images/xebia.png')),
 
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 20),
-                  child: Text('AWARE | ADOPT | CONTRIBUTE',
-                  style: defaultTextStyle(25),
-                  textAlign: TextAlign.center,),
-                ),
-                RaisedButton(
-                  color: Colors.green,
-                  elevation: 5,
-                  splashColor: Colors.yellow[200],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Text('Member Login', style: TextStyle(
-                    color: Colors.white
-                  ),),
-                ),
-            ],
+                ],
+              ),
             ),
-          ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Text('AWARE | ADOPT | CONTRIBUTE',
+              style: defaultTextStyle(25),
+              textAlign: TextAlign.center,),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 20, bottom: 10),
+              child: RaisedButton(
+                onPressed: () {},
+                textColor: Colors.white,
+                padding: EdgeInsets.all(20),
+                child: Text( true ? 'Member Login': 'Know More' , style: TextStyle(fontSize: 20),),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
+        ],
         ),
       ]
     );
   }
+
 }

@@ -5,12 +5,13 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
-final GoogleSignIn _googleSignIn = GoogleSignIn();
 
 class SignInPage extends StatefulWidget {
   final String title = 'Registration';
+  
   @override
   State<StatefulWidget> createState() => SignInPageState();
+
 }
 
 class SignInPageState extends State<SignInPage> {
@@ -57,6 +58,14 @@ class SignInPageState extends State<SignInPage> {
   // Example code for sign out.
   void _signOut() async {
     await _auth.signOut();
+  }
+
+  Future<bool> isUserLoggedIn() async {
+    if( await _auth.currentUser() == null ){
+      return false;
+    }else{
+      return true;
+    }
   }
 }
 
