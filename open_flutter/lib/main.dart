@@ -9,7 +9,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import './auth/auth.dart';
-import './auth/register.dart';
+
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -109,7 +111,7 @@ class _AboutUsState extends State<AboutUs> {
       if (this.context.toString().contains('Gallery')) {
         print('Already There');
       } else {
-        Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
+        Navigator.pushReplacementNamed(context, _GalleryState().rtName);
       }
     } else if (n == 3) {
       if (this.context.toString().contains('AboutUs')) {
@@ -312,6 +314,7 @@ class _SplashScreenState extends State<SplashScreen> {
             '/main': (context) => MainNavDrawer(),
             '/signIn': (context) => SignInPage(),
             '/AboutUs': (context) => AboutUs(),
+            '/gallery': (context) => Gallery(),
           },
           theme: ThemeData(
               // primaryColor: Color(0XFF212845),
@@ -507,7 +510,7 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
       if (this.context.toString().contains('Gallery')) {
         print('Already There');
       } else {
-        Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
+        Navigator.pushReplacementNamed(context, _GalleryState().rtName);
       }
     } else if (n == 3) {
       if (this.context.toString().contains('AboutUs')) {
@@ -666,4 +669,154 @@ class _HomeContentState extends State<HomeContent> {
       );
     }
   }
+}
+
+
+
+class Gallery extends StatefulWidget {
+  @override
+  _GalleryState createState() => _GalleryState();
+}
+
+
+class _GalleryState extends State<Gallery> {
+  List<GalleryItem> galleryItems = [GalleryItem('https://jaxenter.com/wp-content/uploads/2015/11/shutterstock_190446536-e1448385127100.jpg'),
+    GalleryItem('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ04pvROSjJDp6jLkqFWpapfdxh2WmcSmIIZC-LSDPTjYRGatJR&usqp=CAU'),
+    GalleryItem('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ04pvROSjJDp6jLkqFWpapfdxh2WmcSmIIZC-LSDPTjYRGatJR&usqp=CAU')];
+
+
+
+  String rtName = '/gallery';
+  Drawer appToolbar() {
+    return Drawer(
+      child: ListView(
+        children: <Widget>[
+          Container(
+            color: Colors.green,
+            height: 150,
+            child: Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 50,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Image(
+                        image: AssetImage('images/logomain.png'),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          _createDrawerItem(icon: Icons.home, text: 'Home', n: 1),
+          _createDrawerItem(icon: Icons.photo, text: 'Gallery', n: 2),
+          _createDrawerItem(icon: Icons.info, text: 'About Us', n: 3),
+          _createDrawerItem(
+              icon: Icons.remove_red_eye, text: 'Our Vision', n: 4),
+        ],
+      ),
+    );
+  }
+  Widget _createDrawerItem(
+      {IconData icon, String text, GestureTapCallback onTap, int n}) {
+    return ListTile(
+      title: Row(
+        children: <Widget>[
+          Icon(icon),
+          Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(text),
+          )
+        ],
+      ),
+      onTap: () {
+        onTapToolbar(n);
+      },
+    );
+  }
+
+  void onTapToolbar(int n) {
+    if (n == 1) {
+      if (this.context.toString().contains('MainNavDrawer')) {
+        print('Already There');
+      } else {
+        Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
+      }
+    } else if (n == 2) {
+      if (this.context.toString().contains('Gallery')) {
+        print('Already There');
+      } else {
+        Navigator.pushReplacementNamed(context, _GalleryState().rtName);
+      }
+    } else if (n == 3) {
+      if (this.context.toString().contains('AboutUs')) {
+        print('Already There');
+      } else {
+        Navigator.pushReplacementNamed(context, _AboutUsState().rtName);
+      }
+    } else if (n == 4) {
+      if (this.context.toString().contains('OurVision')) {
+        print('Already There');
+      } else {
+        Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
+      }
+    }
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: galleryCont(),
+        drawer: appToolbar(),
+        appBar: AppBar(
+          title: Text('About Us'),
+          backgroundColor: Colors.green,
+        ),
+      ),
+    );
+  }
+
+
+
+  Container galleryCont(){
+    return Container(
+        child: PhotoViewGallery.builder(
+          scrollPhysics: const BouncingScrollPhysics(),
+          builder: (BuildContext context, int index) {
+            return PhotoViewGalleryPageOptions(
+              imageProvider: NetworkImage(galleryItems[index].image),
+              initialScale: PhotoViewComputedScale.contained * 0.8,
+            );
+          },
+          itemCount: galleryItems.length,
+          loadingBuilder: (context, event) => Center(
+            child: Container(
+              width: 20.0,
+              height: 20.0,
+              child: CircularProgressIndicator(
+                value: event == null
+                    ? 0
+                    : event.cumulativeBytesLoaded / event.expectedTotalBytes,
+              ),
+            ),
+          ),
+        )
+    );
+  }
+}
+
+class GalleryItem {
+  String image;
+  GalleryItem(String url){
+    image = url;
+  }
+
 }
