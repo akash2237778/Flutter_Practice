@@ -769,47 +769,89 @@ class _GalleryState extends State<Gallery> {
     }
   }
 
+  Container display;
+
+  @override
+  void initState() {
+    display = galleryPage();
+    super.initState();
+  }
+
+  bool galleryPageOpen = false;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: galleryCont(),
-        drawer: appToolbar(),
-        appBar: AppBar(
-          title: Text('About Us'),
-          backgroundColor: Colors.green,
+
+    return WillPopScope(
+      onWillPop: (){
+        if(galleryPageOpen) {
+          Navigator.pushReplacementNamed(context, _GalleryState().rtName);
+        }
+        },
+      child: MaterialApp(
+        home: Scaffold(
+          body: display,
+          drawer: appToolbar(),
+          appBar: AppBar(
+            title: Text('About Us'),
+            backgroundColor: Colors.green,
+          ),
         ),
       ),
     );
   }
 
-
-
-  Container galleryCont(){
+  Container galleryPage(){
+    galleryPageOpen = false;
     return Container(
-        child: PhotoViewGallery.builder(
-          scrollPhysics: const BouncingScrollPhysics(),
-          builder: (BuildContext context, int index) {
-            return PhotoViewGalleryPageOptions(
-              imageProvider: NetworkImage(galleryItems[index].image),
-              initialScale: PhotoViewComputedScale.contained * 0.8,
-            );
-          },
-          itemCount: galleryItems.length,
-          loadingBuilder: (context, event) => Center(
-            child: Container(
-              width: 20.0,
-              height: 20.0,
-              child: CircularProgressIndicator(
-                value: event == null
-                    ? 0
-                    : event.cumulativeBytesLoaded / event.expectedTotalBytes,
+      child: ListView.builder(
+        itemBuilder: (context, position) {
+          return GestureDetector(
+            onTap: (){
+              setState(() {
+                display = galleryCont(position);
+                print(position);
+              });
+            },
+            child: Card(
+              child: Image(
+                image: NetworkImage(galleryItems[position].image),
               ),
             ),
-          ),
-        )
+          );
+        },
+        itemCount: galleryItems.length,
+
+      ),
     );
+  }
+
+
+  Container galleryCont(int index){
+    galleryPageOpen = true;
+    return Container(
+            child: PhotoViewGallery.builder(
+              scrollPhysics: const BouncingScrollPhysics(),
+              builder: (BuildContext context, index) {
+                return PhotoViewGalleryPageOptions(
+                  imageProvider: NetworkImage(galleryItems[index].image),
+                  initialScale: PhotoViewComputedScale.contained * 0.8,
+                );
+              },
+              itemCount: galleryItems.length,
+              loadingBuilder: (context, event) => Center(
+                child: Container(
+                  width: 20.0,
+                  height: 20.0,
+                  child: CircularProgressIndicator(
+                    value: event == null
+                        ? 0
+                        : event.cumulativeBytesLoaded / event.expectedTotalBytes,
+                  ),
+                ),
+              ),
+            )
+        );
   }
 }
 
