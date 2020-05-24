@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
+import 'package:toast/toast.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class SignInPage extends StatefulWidget {
   final String title = 'Registration';
-  
   @override
   State<StatefulWidget> createState() => SignInPageState();
 
@@ -19,12 +20,13 @@ class SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Text(widget.title),
         actions: <Widget>[
           Builder(builder: (BuildContext context) {
             return FlatButton(
               child: const Text('Sign out'),
-              textColor: Theme.of(context).buttonColor,
+              textColor: Colors.white,
               onPressed: () async {
                 final FirebaseUser user = await _auth.currentUser();
                 if (user == null) {
@@ -87,36 +89,46 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          TextFormField(
-            controller: _emailController,
-            decoration: const InputDecoration(labelText: 'Email'),
-            validator: (String value) {
-              if (value.isEmpty) {
-                return 'Please enter some text';
-              }
-              return null;
-            },
+          Padding(
+            padding: EdgeInsets.only(right: 20 , left: 20),
+            child: TextFormField(
+              controller: _emailController,
+              decoration: const InputDecoration(labelText: 'Email'),
+              validator: (String value) {
+                if (value.isEmpty) {
+                  return 'Please enter some text';
+                }
+                return null;
+              },
+            ),
           ),
-          TextFormField(
-            controller: _passwordController,
-            decoration: const InputDecoration(labelText: 'Password'),
-            validator: (String value) {
-              if (value.isEmpty) {
-                return 'Please enter some text';
-              }
-              return null;
-            },
+          Padding(
+            padding: EdgeInsets.only(right: 20 , left: 20),
+            child: TextFormField(
+              obscureText: true,
+              controller: _passwordController,
+              decoration: const InputDecoration(labelText: 'Password'),
+              validator: (String value) {
+                if (value.isEmpty) {
+                  return 'Please enter some text';
+                }
+                return null;
+              },
+            ),
           ),
           Container(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             alignment: Alignment.center,
             child: RaisedButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
               onPressed: () async {
                 if (_formKey.currentState.validate()) {
                   _signInWithEmailAndPassword();
                 }
               },
-              child: const Text('Submit'),
+              child: const Text('Submit', style: TextStyle(color: Colors.white),),
             ),
           ),
           Container(
@@ -145,19 +157,29 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
 
   // Example code of how to sign in with email and password.
   void _signInWithEmailAndPassword() async {
-    final FirebaseUser user = (await _auth.signInWithEmailAndPassword(
-      email: _emailController.text,
-      password: _passwordController.text,
-    ))
-        .user;
-    if (user != null) {
-      setState(() {
-        _success = true;
-        _userEmail = user.email;
-      });
-    } else {
-      _success = false;
+    try {
+      final FirebaseUser user = (await _auth.signInWithEmailAndPassword(
+        email: _emailController.text,
+        password: _passwordController.text,
+      ))
+          .user;
+      if (user != null) {
+        setState(() {
+          _success = true;
+          _userEmail = user.email;
+          Navigator.pop(context);
+        });
+      } else {
+        _success = false;
+      }
+    }catch(e){
+      print(e);
+      }finally{
+      if(_success == null){
+      Alert(context: context, title: "Invalid Credentials !", desc: "Try Again").show();
     }
+    }
+
   }
 
 
