@@ -5,6 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:toast/toast.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:openflutter/main.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -25,7 +26,7 @@ class SignInPageState extends State<SignInPage> {
         actions: <Widget>[
           Builder(builder: (BuildContext context) {
             return FlatButton(
-              child: const Text('Sign out'),
+              child: Text( isLoggedIn ? 'Sign out' : ''),
               textColor: Colors.white,
               onPressed: () async {
                 final FirebaseUser user = await _auth.currentUser();
@@ -167,6 +168,7 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
         setState(() {
           _success = true;
           _userEmail = user.email;
+          isLoggedIn = true;
           Navigator.pop(context);
         });
       } else {

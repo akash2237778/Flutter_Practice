@@ -1,22 +1,17 @@
 import 'dart:async';
-import 'dart:typed_data';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:openflutter/BottomNav.dart';
 import './auth/auth.dart';
-
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
 import 'OurVision.dart';
-
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'package:flutter/widgets.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
+bool isLoggedIn = false;
 
 void onTapToolbar(int n, BuildContext context) {
   if (n == 1) {
@@ -477,11 +472,40 @@ class MainNavDrawer extends StatefulWidget {
 }
 
 class _MainNavDrawerState extends State<MainNavDrawer> {
+
+  void handleClick(String value) {
+    switch (value) {
+      case 'Logout':
+        FirebaseAuth.instance.signOut();
+        isLoggedIn = false;
+        break;
+      case 'Settings':
+        break;
+      case 'Login':
+        Navigator.pushNamed(context, '/signIn');
+        break;
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('OPEN UPES'),
+        actions: <Widget>[
+          PopupMenuButton<String>(
+            onSelected: handleClick,
+            itemBuilder: (BuildContext context) {
+              return {isLoggedIn ? 'Logout' : 'Login', 'Settings'}.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice),
+                );
+              }).toList();
+            },
+          ),
+        ],
         backgroundColor: Colors.green,
       ),
       drawer: appToolbar(context),
@@ -497,7 +521,7 @@ class HomeContent extends StatefulWidget {
 
 class _HomeContentState extends State<HomeContent> {
   String rtName = '/main';
-  bool isLoggedIn = false;
+
 
   @override
   void initState() {
@@ -540,10 +564,8 @@ class _HomeContentState extends State<HomeContent> {
       Expanded(
         flex: 2,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            SizedBox(
-              height: 10,
-            ),
             Image.asset(
               'images/logomain.png',
               height: 150,
@@ -553,7 +575,7 @@ class _HomeContentState extends State<HomeContent> {
               style: defaultTextStyle(20),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+              padding: EdgeInsets.only(left: 8, right: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -577,62 +599,57 @@ class _HomeContentState extends State<HomeContent> {
                 ],
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Text(
-                'AWARE | ADOPT | CONTRIBUTE',
-                style: defaultTextStyle(25),
-                textAlign: TextAlign.center,
+            Text(
+              'AWARE | ADOPT | CONTRIBUTE',
+              style: defaultTextStyle(25),
+              textAlign: TextAlign.center,
+            ),
+            RaisedButton(
+              onPressed: () {
+                onClickButton(!isLoggedIn);
+              },
+              textColor: Colors.white,
+              padding: EdgeInsets.all(15),
+              child: Text('Know More',
+                style: TextStyle(fontSize: 20),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: RaisedButton(
-                onPressed: () {
-                  onClickButton(!isLoggedIn);
-                },
-                textColor: Colors.white,
-                padding: EdgeInsets.all(15),
-                child: Text(
-                  !isLoggedIn ? 'Member Login' : 'Know More',
-                  style: TextStyle(fontSize: 20),
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.only(left: 10 , right: 10 , bottom: 10),
-                width: double.infinity,
-                color: Colors.green,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Our Mission',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 10),
-                      child: Text(
-                        'OPEN is a platform from where UPES shall make its presence felt in Global Open Source Fraternity. For this, we approached various global IT giants and organizations of repute for support and we were lucky that anyone we contacted promised us support.',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+
           ],
+
+        ),
+      ),
+      Expanded(
+        child: Container(
+          margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          width: double.infinity,
+          color: Colors.green,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Our Mission',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10),
+                child: Text(
+                  'OPEN is a platform from where UPES shall make its presence felt in Global Open Source Fraternity. For this, we approached various global IT giants and organizations of repute for support and we were lucky that anyone we contacted promised us support.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     ]);
@@ -644,7 +661,7 @@ class _HomeContentState extends State<HomeContent> {
         context,
         MaterialPageRoute(builder: (context) => SignInPage()),
       );
-    }else{
+    } else {
       Navigator.pushNamed(context, '/homeBottomNav');
     }
   }
@@ -656,93 +673,107 @@ class Gallery extends StatefulWidget {
 }
 
 class _GalleryState extends State<Gallery> {
-  List<GalleryItem> galleryItems = [
-    GalleryItem('http://18.197.247.183/g4.jpg'),
-    GalleryItem('http://18.197.247.183/g5.jpg'),
-    GalleryItem('http://18.197.247.183/image12.jpeg'),
-    GalleryItem('http://18.197.247.183/academy-logo.svg'),
-    GalleryItem(
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ04pvROSjJDp6jLkqFWpapfdxh2WmcSmIIZC-LSDPTjYRGatJR&usqp=CAU')
-  ];
-
+  int selectedIndex = 0;
   String rtName = '/gallery';
-
-  Container display;
 
   @override
   void initState() {
-    display = galleryPage();
+    fbSetup();
+    feedItem = FeedItem('', '', '');
+    // TODO: implement initState
+
+    communityPosts = db.reference().child('Gallery');
+
+    communityPosts.onChildAdded.listen(_onEntryAdded);
+    communityPosts.onChildChanged.listen(_onEntryChanged);
+
     super.initState();
   }
 
-  bool galleryPageOpen = false;
+  _onEntryAdded(Event event) {
+    setState(() {
+      items.add(FeedItem.fromSnapshot(event.snapshot));
+    });
+  }
+
+  _onEntryChanged(Event event) {
+    var old = items.singleWhere((entry) {
+      return entry.key == event.snapshot.key;
+    });
+    setState(() {
+      items[items.indexOf(old)] = FeedItem.fromSnapshot(event.snapshot);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () {
-        if (galleryPageOpen) {
-          Navigator.pushReplacementNamed(context, _GalleryState().rtName);
-        } else {
-          Navigator.pushReplacementNamed(context, _HomeContentState().rtName);
-        }
-      },
-      child: MaterialApp(
-        home: Scaffold(
-          body: display,
-          drawer: appToolbar(context),
-          appBar: AppBar(
-            title: Text('About Us'),
-            backgroundColor: Colors.green,
-          ),
-        ),
+    return Scaffold(
+      backgroundColor: Colors.white70,
+      drawer: appToolbar(context),
+      appBar: AppBar(
+        title: Text('Gallery'),
+      ),
+      body: Center(
+        child: homeContainer(),
       ),
     );
   }
 
-  Container galleryPage() {
-    galleryPageOpen = false;
-    return Container(
-      child: ListView.builder(
-        itemBuilder: (context, position) {
-          return GestureDetector(
-            onTap: () {
-              setState(() {
-                display = galleryCont(position);
-                print(position);
-              });
-            },
-            child: Card(
-              child: Image(
-                image: NetworkImage(galleryItems[position].image),
-              ),
-            ),
-          );
-        },
-        itemCount: galleryItems.length,
-      ),
-    );
-  }
-
-  Container galleryCont(int index) {
-    galleryPageOpen = true;
-    return Container(
-        child: Column(
-      children: <Widget>[
-        Expanded(
-          child: Image(
-            fit: BoxFit.fitWidth,
-            image: NetworkImage(galleryItems[index].image),
-          ),
-        ),
-      ],
-    ));
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
 
-class GalleryItem {
-  String image;
-  GalleryItem(String url) {
-    image = url;
-  }
+Container homeContainer() {
+  return Container(
+    child: FirebaseAnimatedList(
+        query: FirebaseDatabase.instance.reference().child("Gallery"),
+        reverse: false,
+        itemBuilder:
+            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
+          FeedItem f = FeedItem.fromSnapshot(snapshot);
+          print(f.title);
+          return Card(
+            margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+            elevation: 5,
+            child: Column(
+              children: <Widget>[
+                loadImg(f.postImgUrl),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    f.title,
+                    textAlign: TextAlign.left,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                  ),
+                ),
+                Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Text(f.description)),
+              ],
+            ),
+          );
+        }),
+  );
+}
+
+Image loadImg(String url) {
+  return Image(
+    image: NetworkImage(url),
+    fit: BoxFit.fitHeight,
+    loadingBuilder:
+        (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
+      if (loadingProgress == null) return child;
+      return Center(
+        child: CircularProgressIndicator(
+          value: loadingProgress.expectedTotalBytes != null
+              ? loadingProgress.cumulativeBytesLoaded /
+                  loadingProgress.expectedTotalBytes
+              : null,
+        ),
+      );
+    },
+  );
 }
