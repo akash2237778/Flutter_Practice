@@ -1,4 +1,3 @@
-//import 'package:js/js.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -15,11 +14,6 @@ Future<void> fbSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
   db = FirebaseDatabase.instance.reference();
   print(db.reference().child('messages').key);
- // db.reference().child('messages');
-
-  // db.reference().child('CommunityPosts').child('P1').set({ 'title': 'title', 'description': 'description' , 'postImgUrl': 'https://thecsrjournal.in/wp-content/uploads/2018/10/speed-post.png' });
-  // db.reference().child('CommunityPosts').child('P2').set({ 'title': 'title', 'description': 'description' , 'postImgUrl': 'https://thecsrjournal.in/wp-content/uploads/2018/10/speed-post.png' });
-  // db.reference().child('CommunityPosts').child('P3').set({ 'title': 'title', 'description': 'description' , 'postImgUrl': 'https://thecsrjournal.in/wp-content/uploads/2018/10/speed-post.png' });
 }
 
 class HomeBottomNav extends StatefulWidget {
@@ -30,10 +24,9 @@ class HomeBottomNav extends StatefulWidget {
 class _HomeBottomNavState extends State<HomeBottomNav> {
   int selectedIndex = 0;
   final widgetOptions = [
-    liiisst(),
+    homeContainer(),
     Text('Add new beer'),
     Text('Favourites'),
-   // Text('Favourites')
   ];
 
   @override
@@ -46,15 +39,9 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
 
     communityPosts.onChildAdded.listen(_onEntryAdded);
     communityPosts.onChildChanged.listen(_onEntryChanged);
-    db.push().child('test').set('Hello');
-    if(db != null){
-      print('All good');
-      print(communityPosts.child('P1').parent().toString());
-    }
 
     super.initState();
   }
-
 
   _onEntryAdded(Event event) {
     setState(() {
@@ -103,41 +90,68 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
   }
 }
 
-Container liiisst(){
+Container homeContainer() {
   return Container(
     child: FirebaseAnimatedList(
-        query: FirebaseDatabase.instance
-            .reference().child("CommunityPosts"),
+        query: FirebaseDatabase.instance.reference().child("CommunityPosts"),
         reverse: false,
-        itemBuilder: (_, DataSnapshot snapshot,
-            Animation<double> animation, int x) {
+        itemBuilder:
+            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
           FeedItem f = FeedItem.fromSnapshot(snapshot);
           print(f.title);
           return Card(
-            margin: EdgeInsets.all(10),
+            margin: EdgeInsets.only(top: 10, left: 10, right: 10),
             elevation: 5,
-            child: Column(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                loadImg(f.postImgUrl),
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    f.title,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(
+                          top: 10, bottom: 5, right: 10, left: 10),
+                      child: Text(
+                        f.title,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 28),
+                      ),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.only(left: 12, bottom: 10),
+                        child: Text(f.description)),
+                  ],
                 ),
                 Padding(
-                    padding: EdgeInsets.only(bottom: 10),
-                    child: Text(f.description)),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image(
+                    height: 100,
+                    width: 100,
+                    image: NetworkImage(f.postImgUrl),
+                    fit: BoxFit.fitHeight,
+                    loadingBuilder: (BuildContext context, Widget child,
+                        ImageChunkEvent loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: CircularProgressIndicator(
+                          value: loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                                  loadingProgress.expectedTotalBytes
+                              : null,
+                        ),
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           );
-        }
-    ),
+        }),
   );
 }
 
+/*
 ListView recyclerList() {
   List<FeedItem> feedList = [];
   feedList.add(FeedItem('Title', 'description',
@@ -175,6 +189,8 @@ ListView recyclerList() {
     itemCount: feedList.length,
   );
 }
+*/
+
 
 class FeedItem {
   String key;
@@ -204,6 +220,8 @@ class FeedItem {
 
 Image loadImg(String url) {
   return Image(
+    height: 100,
+    width: 100,
     image: NetworkImage(url),
     fit: BoxFit.fitHeight,
     loadingBuilder:
