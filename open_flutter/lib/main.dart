@@ -8,11 +8,35 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:openflutter/BottomNav.dart';
 import './auth/auth.dart';
 
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'OurVision.dart';
+import 'package:flutter/widgets.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+FirebaseApp app;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  app = await FirebaseApp.configure(
+    name: 'db2',
+    options: const FirebaseOptions(
+      googleAppID: '1:537741826237:android:298c5ffdec098999c83fd4',
+      apiKey: 'AIzaSyAb5eQ14gUrCMte1XYmqNrTelC5CZgu6n8',
+      databaseURL: 'https://open-mobile-fa274.firebaseio.com/',
+    ),
+  );
+
+
+    runApp(MaterialApp(
+      home: SplashScreen(),
+    ));
+
+}
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -128,11 +152,7 @@ Image carouselImg(String url) {
   );
 }
 
-void main() {
-  runApp(MaterialApp(
-    home: SplashScreen(),
-  ));
-}
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -345,6 +365,7 @@ class _SplashScreenState extends State<SplashScreen> {
             '/AboutUs': (context) => AboutUs(),
             '/gallery': (context) => Gallery(),
             '/ourVision': (context) => OurVision(),
+            '/homeBottomNav': (context) => HomeBottomNav(app: app,),
           },
           theme: ThemeData(
               // primaryColor: Color(0XFF212845),
@@ -641,6 +662,8 @@ class _HomeContentState extends State<HomeContent> {
         context,
         MaterialPageRoute(builder: (context) => SignInPage()),
       );
+    }else{
+      Navigator.pushNamed(context, '/homeBottomNav');
     }
   }
 }
