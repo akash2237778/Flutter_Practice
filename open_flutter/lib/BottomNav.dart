@@ -108,12 +108,30 @@ Container liiisst(){
     child: FirebaseAnimatedList(
         query: FirebaseDatabase.instance
             .reference().child("CommunityPosts"),
-        padding: new EdgeInsets.all(8.0),
         reverse: false,
         itemBuilder: (_, DataSnapshot snapshot,
             Animation<double> animation, int x) {
-          return new ListTile(
-            subtitle: new Text(snapshot.value.toString()),
+          FeedItem f = FeedItem.fromSnapshot(snapshot);
+          print(f.title);
+          return Card(
+            margin: EdgeInsets.all(10),
+            elevation: 5,
+            child: Column(
+              children: <Widget>[
+                loadImg(f.postImgUrl),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    f.title,
+                    textAlign: TextAlign.left,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                  ),
+                ),
+                Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Text(f.description)),
+              ],
+            ),
           );
         }
     ),
