@@ -24,4 +24,5 @@ Depends on all your plugins, and provides a function to register them.
   s.dependency 'firebase_database'
   s.dependency 'firebase_dynamic_links'
   s.dependency 'google_sign_in'
+  s.dependency 'url_launcher'
 end

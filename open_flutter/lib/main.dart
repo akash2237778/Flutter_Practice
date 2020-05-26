@@ -9,6 +9,7 @@ import 'OurVision.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/widgets.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'DevloperProfile.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 bool isLoggedIn = false;
@@ -43,42 +44,92 @@ void onTapToolbar(int n, BuildContext context) {
 
 Drawer appToolbar(BuildContext context) {
   return Drawer(
-    child: ListView(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Container(
-          color: Colors.green,
-          height: 150,
-          child: Padding(
-            padding: EdgeInsets.only(left: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 50,
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Image(
-                      image: AssetImage('images/logomain.png'),
-                    ),
+        Expanded(
+          child: ListView(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.topLeft,
+                color: Colors.green ,
+                height: 150,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 50,
+                        child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Image(
+                            image: AssetImage('images/logomain.png'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text('OPEN UPES',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white
+                        ),),
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+              createDrawerItem(
+                  icon: Icons.home, text: 'Home', n: 1, context: context),
+              createDrawerItem(
+                  icon: Icons.photo, text: 'Gallery', n: 2, context: context),
+              createDrawerItem(
+                  icon: Icons.info, text: 'About Us', n: 3, context: context),
+              createDrawerItem(
+                  icon: Icons.remove_red_eye,
+                  text: 'Our Vision',
+                  n: 4,
+                  context: context),
+
+
+            ],
           ),
         ),
-        createDrawerItem(
-            icon: Icons.home, text: 'Home', n: 1, context: context),
-        createDrawerItem(
-            icon: Icons.photo, text: 'Gallery', n: 2, context: context),
-        createDrawerItem(
-            icon: Icons.info, text: 'About Us', n: 3, context: context),
-        createDrawerItem(
-            icon: Icons.remove_red_eye,
-            text: 'Our Vision',
-            n: 4,
-            context: context),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: RaisedButton(
+            color: Colors.green,
+            splashColor: Colors.blue,
+            animationDuration: Duration(milliseconds: 10),
+            onPressed: (){
+                  Navigator.pushNamed(context, '/developerInfo');
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+            ),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                children: <Widget>[
+                  Image(
+                    image: AssetImage('images/developer.png'),
+                    width: 25,
+                    height: 25,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Text('Developer Info',
+                    style: TextStyle(
+                      color: Colors.white
+                    ),),
+                  ),
+                ],
+              ),
+          ),
+        )
       ],
     ),
   );
@@ -343,6 +394,7 @@ class _SplashScreenState extends State<SplashScreen> {
             '/gallery': (context) => Gallery(),
             '/ourVision': (context) => OurVision(),
             '/homeBottomNav': (context) => HomeBottomNav(),
+            '/developerInfo': (context) => DeveloperInfo(),
           },
           theme: ThemeData(
               // primaryColor: Color(0XFF212845),

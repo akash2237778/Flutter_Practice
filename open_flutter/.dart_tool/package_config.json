@@ -69,25 +69,25 @@
     },
     {
       "name": "firebase_auth",
-      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.16.0",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.16.1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "firebase_auth_platform_interface",
-      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-1.1.7",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_platform_interface-1.1.8",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "firebase_auth_web",
-      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.2",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "firebase_core",
-      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.4+3",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -105,7 +105,7 @@
     },
     {
       "name": "firebase_database",
-      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-3.1.5",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-3.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -212,10 +212,22 @@
       "languageVersion": "2.6"
     },
     {
+      "name": "platform_detect",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/platform_detect-1.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
       "name": "plugin_platform_interface",
       "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "pub_semver",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/pub_semver-1.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
     },
     {
       "name": "quiver",
@@ -284,6 +296,30 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "url_launcher",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_macos",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+7",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_web",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+6",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "uuid",
       "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-2.0.4",
       "packageUri": "lib/",
@@ -308,7 +344,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-05-25T11:26:16.522113Z",
+  "generated": "2020-05-26T13:57:42.372312Z",
   "generator": "pub",
   "generatorVersion": "2.8.2"
 }
