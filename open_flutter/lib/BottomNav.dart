@@ -100,7 +100,7 @@ Container homeContainer() {
           FeedItem f = FeedItem.fromSnapshot(snapshot);
           print(f.title);
           return Card(
-            margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+            margin: EdgeInsets.only(top: 1, left: 1, right: 1),
             elevation: 5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

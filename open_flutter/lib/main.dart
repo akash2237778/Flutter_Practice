@@ -160,7 +160,7 @@ Widget createDrawerItem(
 Image carouselImg(String url) {
   return Image(
     image: NetworkImage(url),
-    fit: BoxFit.fitHeight,
+    fit: BoxFit.cover,
     loadingBuilder:
         (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
       if (loadingProgress == null) return child;
@@ -224,9 +224,13 @@ class _AboutUsState extends State<AboutUs> {
 
   Container aboutUs() {
     return Container(
-        margin: EdgeInsets.all(0),
-        color: Colors.grey[200],
-        child: ListView(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("images/aboutusBG.jpeg"),
+          fit: BoxFit.fill
+        ),
+      ),
+      /*child: ListView(
           children: <Widget>[
             Container(
               margin: EdgeInsets.symmetric(horizontal: 0),
@@ -369,9 +373,10 @@ class _AboutUsState extends State<AboutUs> {
             ),
           ],
         ));
+  }*/
+    );
   }
 }
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -382,7 +387,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 1), () {
       print("Hii");
       // runApp(MaterialApp(home: MyHomePage(title: 'Firebase Auth Demo')));
       runApp(MaterialApp(
@@ -586,6 +591,14 @@ class _HomeContentState extends State<HomeContent> {
     super.initState();
   }
 
+  List<String> carouselImages = ['https://www.upesopen.org/b.png','https://www.upesopen.org/b.png','https://www.upesopen.org/b.png','https://www.upesopen.org/b.png'];
+  Future<String> loadImge() async {
+    carouselImages[0] = ((await FirebaseDatabase.instance.reference().child("carouselImg/Img1").once()).value.toString());
+    carouselImages[1] = ((await FirebaseDatabase.instance.reference().child("carouselImg/Img2").once()).value.toString());
+    carouselImages[2] = ((await FirebaseDatabase.instance.reference().child("carouselImg/Img3").once()).value.toString());
+    carouselImages[3] = ((await FirebaseDatabase.instance.reference().child("carouselImg/Img4").once()).value.toString());
+
+  }
   @override
   Widget build(BuildContext context) {
     FirebaseAuth.instance.currentUser().then((user) => user != null
@@ -593,15 +606,16 @@ class _HomeContentState extends State<HomeContent> {
             isLoggedIn = true;
           })
         : null);
+    loadImge();
     return Column(children: <Widget>[
       Expanded(
           flex: 1,
           child: Carousel(
             images: [
-              carouselImg('http://18.197.247.183/g4.jpg'),
-              carouselImg('http://18.197.247.183/g5.jpg'),
-              carouselImg('https://www.upesopen.org/b.png'),
-              carouselImg('http://18.197.247.183/MIC.PNG'),
+              carouselImg(carouselImages[0]),
+              carouselImg(carouselImages[1]),
+              carouselImg(carouselImages[2]),
+              carouselImg(carouselImages[3]),
               // ExactAssetImage("assets/images/LaunchImage.jpg")
             ],
             dotSize: 4.0,
@@ -620,11 +634,23 @@ class _HomeContentState extends State<HomeContent> {
           children: <Widget>[
             Image.asset(
               'images/logomain.png',
-              height: 150,
+              height: 120,
+            ),
+            Text(
+              'AWARE | ADOPT | CONTRIBUTE',
+              style: TextStyle(
+                color: Color.fromRGBO(160, 204, 58, 100),
+                fontSize: 25,
+                fontWeight: FontWeight.bold
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 10,
             ),
             Text(
               'In association with :',
-              style: defaultTextStyle(20),
+              style: defaultTextStyle(15),
             ),
             Padding(
               padding: EdgeInsets.only(left: 8, right: 8),
@@ -639,10 +665,6 @@ class _HomeContentState extends State<HomeContent> {
                   SizedBox(
                     width: 10,
                   ),
-                  Expanded(child: Image.asset('images/techmint.png')),
-                  SizedBox(
-                    width: 10,
-                  ),
                   Expanded(child: Image.asset('images/upes.png')),
                   SizedBox(
                     width: 10,
@@ -651,25 +673,20 @@ class _HomeContentState extends State<HomeContent> {
                 ],
               ),
             ),
-            Text(
-              'AWARE | ADOPT | CONTRIBUTE',
-              style: defaultTextStyle(25),
-              textAlign: TextAlign.center,
-            ),
+
             RaisedButton(
               onPressed: () {
                 onClickButton(!isLoggedIn);
               },
               textColor: Colors.white,
-              padding: EdgeInsets.all(15),
-              child: Text('Know More',
+              padding: EdgeInsets.all(10),
+              child: Text('Member Login',
                 style: TextStyle(fontSize: 20),
               ),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
             ),
-
           ],
 
         ),
@@ -678,28 +695,43 @@ class _HomeContentState extends State<HomeContent> {
         child: Container(
           margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
           width: double.infinity,
-          color: Colors.green,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Our Mission',
+                'University of Peteroleum and Energy Studies',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10),
-                child: Text(
-                  'OPEN is a platform from where UPES shall make its presence felt in Global Open Source Fraternity. For this, we approached various global IT giants and organizations of repute for support and we were lucky that anyone we contacted promised us support.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                  ),
-                ),
-              )
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.my_location , color: Colors.pink, size: 20,),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Text('Dehradun, Uttrakhand'),
+                    ),
+                  ],
+                )
+              ),
+              /*Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.contact_mail , color: Colors.black, size: 20,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text('contact@upesopen.org'),
+                      ),
+                    ],
+                  )
+              )*/
             ],
           ),
         ),
@@ -760,7 +792,7 @@ class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
+      backgroundColor: Colors.white,
       drawer: appToolbar(context),
       appBar: AppBar(
         title: Text('Gallery'),
@@ -798,7 +830,7 @@ Container homeContainer() {
                   child: Text(
                     f.title,
                     textAlign: TextAlign.left,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                   ),
                 ),
                 Padding(
