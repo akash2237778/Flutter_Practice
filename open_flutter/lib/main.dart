@@ -52,7 +52,7 @@ Drawer appToolbar(BuildContext context) {
             children: <Widget>[
               Container(
                 alignment: Alignment.topLeft,
-                color: Colors.green ,
+                color: Color.fromRGBO(160, 204, 57, 2) ,
                 height: 150,
                 child: Padding(
                   padding: EdgeInsets.only(left: 10),
@@ -101,7 +101,7 @@ Drawer appToolbar(BuildContext context) {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: RaisedButton(
-            color: Colors.green,
+            color: Color.fromRGBO(160, 204, 57, 2),
             splashColor: Colors.blue,
             animationDuration: Duration(milliseconds: 10),
             onPressed: (){
@@ -216,7 +216,7 @@ class _AboutUsState extends State<AboutUs> {
         drawer: appToolbar(context),
         appBar: AppBar(
           title: Text('About Us'),
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromRGBO(160, 204, 57, 2),
         ),
       ),
     );
@@ -405,10 +405,10 @@ class _SplashScreenState extends State<SplashScreen> {
               // primaryColor: Color(0XFF212845),
               //scaffoldBackgroundColor: Color(0XFF212845),
               primarySwatch: Colors.green,
-              buttonColor: Colors.green,
+              buttonColor: Color.fromRGBO(160, 204, 57, 2),
               textTheme: TextTheme(
                   button: TextStyle(
-                color: Colors.green, // This is not working.
+                color: Color.fromRGBO(160, 204, 57, 2), // This is not working.
                 //fontSize: 30.0,
               )))));
     });
@@ -421,7 +421,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.green),
+            decoration: BoxDecoration(color: Color.fromRGBO(160, 204, 57, 2)),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -554,7 +554,7 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
           PopupMenuButton<String>(
             onSelected: handleClick,
             itemBuilder: (BuildContext context) {
-              return {isLoggedIn ? 'Logout' : 'Login', 'Settings'}.map((String choice) {
+              return {isLoggedIn ? 'Logout' : 'Login'}.map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
                   child: Text(choice),
@@ -563,7 +563,7 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
             },
           ),
         ],
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(160, 204, 57, 2),
       ),
       drawer: appToolbar(context),
       body: HomeContent(),
@@ -639,7 +639,7 @@ class _HomeContentState extends State<HomeContent> {
             Text(
               'AWARE | ADOPT | CONTRIBUTE',
               style: TextStyle(
-                color: Color.fromRGBO(160, 204, 58, 100),
+                color: Color.fromRGBO(160, 204, 57, 2),
                 fontSize: 25,
                 fontWeight: FontWeight.bold
               ),
@@ -795,6 +795,7 @@ class _GalleryState extends State<Gallery> {
       backgroundColor: Colors.white,
       drawer: appToolbar(context),
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(160, 204, 57, 2),
         title: Text('Gallery'),
       ),
       body: Center(
@@ -830,18 +831,22 @@ Container homeContainer() {
                   child: Text(
                     f.title,
                     textAlign: TextAlign.left,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    style: TextStyle( fontSize: 20),
                   ),
                 ),
                 Padding(
                     padding: EdgeInsets.only(bottom: 10),
-                    child: Text(f.description)),
+                    child: Text(f.description,
+                    style: TextStyle(
+                      color: Colors.blueGrey
+                    ),),),
               ],
             ),
           );
         }),
   );
 }
+
 
 Image loadImg(String url) {
   return Image(

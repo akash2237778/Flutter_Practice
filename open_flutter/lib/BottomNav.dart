@@ -9,6 +9,7 @@ DatabaseReference db;
 FeedItem feedItem;
 List<FeedItem> items = List();
 DatabaseReference communityPosts;
+double itemWidth;
 
 Future<void> fbSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,9 +24,10 @@ class HomeBottomNav extends StatefulWidget {
 
 class _HomeBottomNavState extends State<HomeBottomNav> {
   int selectedIndex = 0;
+
   final widgetOptions = [
     homeContainer(),
-    Text('Add new beer'),
+    newsContainer(),
     Text('Favourites'),
   ];
 
@@ -60,10 +62,13 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
 
   @override
   Widget build(BuildContext context) {
+    itemWidth = MediaQuery.of(context).size.width*.7;
+
     return Scaffold(
       backgroundColor: Colors.white70,
       appBar: AppBar(
         title: Text('OPEN UPES'),
+        backgroundColor: Color.fromRGBO(160, 204, 57, 2),
       ),
       body: Center(
         child: widgetOptions.elementAt(selectedIndex),
@@ -77,7 +82,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
               icon: Icon(Icons.assignment), title: Text('Projects')),
         ],
         currentIndex: selectedIndex,
-        fixedColor: Colors.green,
+        fixedColor: Color.fromRGBO(160, 204, 57, 2),
         onTap: onItemTapped,
       ),
     );
@@ -105,23 +110,26 @@ Container homeContainer() {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(
-                          top: 10, bottom: 5, right: 10, left: 10),
-                      child: Text(
-                        f.title,
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 28),
+                Container(
+                  width: itemWidth,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 10, bottom: 5, right: 10, left: 10),
+                        child: Text(
+                          f.title,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 20),
+                        ),
                       ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(left: 12, bottom: 10),
-                        child: Text(f.description)),
-                  ],
+                      Padding(
+                          padding: EdgeInsets.only(left: 12, bottom: 10),
+                          child: Text(f.description,style: TextStyle(color: Colors.blueGrey),)),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -150,6 +158,71 @@ Container homeContainer() {
         }),
   );
 }
+
+Container newsContainer() {
+  return Container(
+    child: FirebaseAnimatedList(
+        query: FirebaseDatabase.instance.reference().child("NewsPosts"),
+        reverse: false,
+        itemBuilder:
+            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
+          FeedItemNews n = FeedItemNews.fromSnapshot(snapshot);
+          print("News");
+          return Card(
+            margin: EdgeInsets.only(top: 1, left: 1, right: 1),
+            elevation: 5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  width: itemWidth,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 10, bottom: 5, right: 10, left: 10),
+                        child: Text(
+                          n.title,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 20),
+                        ),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.only(left: 12, bottom: 10),
+                          child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image(
+                    height: 100,
+                    width: 100,
+                    image: NetworkImage(n.postImgUrl),
+                    fit: BoxFit.fitHeight,
+                    loadingBuilder: (BuildContext context, Widget child,
+                        ImageChunkEvent loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: CircularProgressIndicator(
+                          value: loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                              loadingProgress.expectedTotalBytes
+                              : null,
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          );
+        }),
+  );
+}
+
 
 /*
 ListView recyclerList() {
@@ -190,6 +263,33 @@ ListView recyclerList() {
   );
 }
 */
+
+
+class FeedItemNews {
+  String key;
+  String title;
+  String description;
+  String postImgUrl;
+
+  FeedItemNews(this.title, this.description, this.postImgUrl);
+  String fbString() {
+    return "{ 'title': '$title', 'description': '$description' , 'postImgUrl': '$postImgUrl' }";
+  }
+
+  FeedItemNews.fromSnapshot(DataSnapshot snapshot)
+      : key = snapshot.key,
+        title = snapshot.value["title"],
+        description = snapshot.value["description"],
+        postImgUrl = snapshot.value["postImgUrl"];
+
+  toJson() {
+    return {
+      "title": title,
+      "description": description,
+      "postImgUrl": postImgUrl,
+    };
+  }
+}
 
 
 class FeedItem {

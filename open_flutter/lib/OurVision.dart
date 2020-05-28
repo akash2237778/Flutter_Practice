@@ -17,7 +17,7 @@ class _OurVisionState extends State<OurVision> {
         drawer: appToolbar(context),
         appBar: AppBar(
           title: Text('Our Vision'),
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromRGBO(160, 204, 57, 2),
         ),
       ),
     );
@@ -29,7 +29,7 @@ class _OurVisionState extends State<OurVision> {
         carouselImg('https://www.upesopen.org/img/mission.png'),
         Card(
           margin: EdgeInsets.all(10),
-          color: Colors.green,
+          color: Color.fromRGBO(160, 204, 57, 2),
           elevation: 5,
           child: Column(
             children: <Widget>[

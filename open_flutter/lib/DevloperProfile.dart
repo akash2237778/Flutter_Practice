@@ -14,7 +14,7 @@ class _DeveloperInfoState extends State<DeveloperInfo> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(160, 204, 57, 2),
         body: SafeArea(
             child: Column(
               children: <Widget>[
