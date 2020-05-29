@@ -2,88 +2,126 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e9f1e1c-983e-40d1-8495-518443448afe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/fork.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Instagram.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/debug/r/io/flutter/plugins/firebase_core_web/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/debug/r/io/flutter/plugins/firebaseauth_web/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/dex/debug/mergeDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/dex/debug/mergeDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/eQx7qtCmszonKtNGt1sWVJgLnJs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/eQx7qtCmszonKtNGt1sWVJgLnJs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/release/r/io/flutter/plugins/firebase_core_web/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/release/r/io/flutter/plugins/firebaseauth_web/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/multi-v2/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/multi-v2/release.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/dex/release/mergeDexRelease/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/dex/release/mergeDexRelease/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$integer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$integer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/ZYmIPVBxg2Ur9_wb0YddWgIU2qs=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/ZYmIPVBxg2Ur9_wb0YddWgIU2qs=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/xHnm2Re0cEADAOc8YR0btHBc3+U=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/xHnm2Re0cEADAOc8YR0btHBc3+U=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/h_VmzBV4IVfB+5sAPL_bfLiRzK4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/h_VmzBV4IVfB+5sAPL_bfLiRzK4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$dimen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$id.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$integer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$string.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R$styleable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/com/google/firebase/storage/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$dimen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$id.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$integer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$string.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R$styleable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebase_core_web/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$dimen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$id.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$integer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$string.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R$styleable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/release/classes/io/flutter/plugins/firebaseauth_web/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$attr.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$color.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$dimen.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$drawable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$id.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$integer.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$layout.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$string.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$style.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$styleable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$attr.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$color.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$dimen.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$drawable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$id.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$integer.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$layout.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$string.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$style.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$styleable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/release/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/release/out.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$attr.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$color.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$dimen.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$drawable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$id.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$integer.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$layout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$string.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$style.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R$styleable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/com/google/firebase/storage/R.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$attr.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$color.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$dimen.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$drawable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$id.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$integer.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$layout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$string.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$style.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R$styleable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebase_core_web/R.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$attr.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$color.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$dimen.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$drawable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$id.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$integer.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$layout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$string.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$style.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R$styleable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/release/0/io/flutter/plugins/firebaseauth_web/R.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/release/app-release.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/BottomNav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BottomNav.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590673921181</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Github API integration">
+      <created>1590768220135</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590768220135</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +286,7 @@
     <MESSAGE value="Succesfull Card View from firebase" />
     <MESSAGE value="UI changes and Carousel Image load from firebase link" />
     <MESSAGE value="UI color changed, Home item width issue fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI color changed, Home item width issue fixed" />
+    <MESSAGE value="Github API integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Github API integration" />
   </component>
 </project>

@@ -4,6 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:twitter_api/twitter_api.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:insta_html_parser/insta_html_parser.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 FirebaseApp app;
 DatabaseReference db;
@@ -162,72 +167,89 @@ Container homeContainer() {
 }
 
 
-Container newsContainer() {
-  return Container(
-    child: FirebaseAnimatedList(
-        query: FirebaseDatabase.instance.reference().child("NewsPosts"),
-        reverse: false,
-        itemBuilder:
-            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
-          FeedItemNews n = FeedItemNews.fromSnapshot(snapshot);
-          print("News");
-          return Card(
-            margin: EdgeInsets.only(top: 1, left: 1, right: 1),
-            elevation: 5,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  width: itemWidth,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: 10, bottom: 5, right: 10, left: 10),
-                        child: Text(
-                          n.title,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontSize: 20),
+Expanded newsContainer() {
+  return Expanded(
+    child: Container(
+      child: FirebaseAnimatedList(
+          query: FirebaseDatabase.instance.reference().child("News"),
+          reverse: false,
+          itemBuilder:
+              (_, DataSnapshot snapshot, Animation<double> animation, int x) {
+            FeedItemNews n = FeedItemNews.fromSnapshot(snapshot);
+            print("News");
+            return Card(
+              margin: EdgeInsets.only(top: 1, left: 1, right: 1),
+              elevation: 5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    width: itemWidth,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 10, bottom: 5, right: 10, left: 10),
+                          child: Text(
+                            n.title,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.only(left: 12, bottom: 10),
-                          child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
-                    ],
+                        Padding(
+                            padding: EdgeInsets.only(left: 12, bottom: 10),
+                            child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image(
-                    height: 100,
-                    width: 100,
-                    image: NetworkImage(n.postImgUrl),
-                    fit: BoxFit.fitHeight,
-                    loadingBuilder: (BuildContext context, Widget child,
-                        ImageChunkEvent loadingProgress) {
-                      if (loadingProgress == null) return child;
-                      return Center(
-                        child: CircularProgressIndicator(
-                          value: loadingProgress.expectedTotalBytes != null
-                              ? loadingProgress.cumulativeBytesLoaded /
-                              loadingProgress.expectedTotalBytes
-                              : null,
-                        ),
-                      );
-                    },
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image(
+                      height: 100,
+                      width: 100,
+                      image: NetworkImage(n.postImgUrl),
+                      fit: BoxFit.fitHeight,
+                      loadingBuilder: (BuildContext context, Widget child,
+                          ImageChunkEvent loadingProgress) {
+                        if (loadingProgress == null) return child;
+                        return Center(
+                          child: CircularProgressIndicator(
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                loadingProgress.expectedTotalBytes
+                                : null,
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
-            ),
-          );
-        }),
+                ],
+              ),
+            );
+          }),
+    ),
   );
 }
 
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+
 Container githubContainer() {
   return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+          image: AssetImage('images/homeBG.jpeg'),
+          fit: BoxFit.fitHeight
+      ),
+    ),
     child: FirebaseAnimatedList(
         query: FirebaseDatabase.instance.reference().child("Github"),
         reverse: false,
@@ -235,66 +257,74 @@ Container githubContainer() {
             (_, DataSnapshot snapshot, Animation<double> animation, int x) {
           FeedItemGithub n = FeedItemGithub.fromSnapshot(snapshot);
           print("github");
-          return Card(
-            margin: EdgeInsets.only(top: 1, left: 1, right: 1),
-            elevation: 5,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  width: itemWidth,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: 10, bottom: 5, right: 10, left: 10),
-                        child: Text(
-                          n.name,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontSize: 20),
+          return FlatButton(
+            color: Colors.transparent,
+            padding: EdgeInsets.all(0),
+            onPressed: (){
+              _launchURL('https://github.com/' + n.full_name);
+            },
+            child: Card(
+              color: Colors.transparent,
+              margin: EdgeInsets.only(top: 1, left: 1, right: 1),
+              elevation: 5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    width: itemWidth,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 10, bottom: 5, right: 10, left: 10),
+                          child: Text(
+                            n.name,
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
-                      Padding(
+                        Padding(
+                            padding: EdgeInsets.only(left: 12, bottom: 10),
+                            child: Text(n.description,style: TextStyle(color: Colors.black),)),
+                        Padding(
                           padding: EdgeInsets.only(left: 12, bottom: 10),
-                          child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
+                          child: Row(
+                            children: [
+                              Text('Last Updated : '),
+                              Text(n.lastUpdated),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Column(
+                    children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 12, bottom: 10),
+                        padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Text('Last Updated : '),
-                            Text(n.lastUpdated),
+                            Image.asset('images/fork.png' , width: 30 , height:  30,),
+                            Text(n.fork.toString()),
                           ],
                         ),
-                      )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Icon(Icons.star_border),
+                            Text(n.stars.toString()),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Image.asset('images/fork.png' , width: 30 , height:  30,),
-                          Text(n.fork.toString()),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.star_border),
-                          Text(n.stars.toString()),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
 
-              ],
+                ],
+              ),
             ),
           );
         }),
@@ -376,13 +406,15 @@ class FeedItemGithub {
   int fork;
   String lastUpdated;
   int stars;
+  String full_name;
 
-  FeedItemGithub(this.name, this.description, this.fork , this.lastUpdated , this.stars);
+  FeedItemGithub(this.name, this.description, this.fork , this.lastUpdated , this.stars , this.full_name);
 
 
   FeedItemGithub.fromSnapshot(DataSnapshot snapshot)
       : key = snapshot.key,
         name = snapshot.value["name"],
+        full_name = snapshot.value["full_name"],
         description = snapshot.value["description"],
         fork = snapshot.value["fork"],
         stars = snapshot.value["stars"],
@@ -391,6 +423,7 @@ class FeedItemGithub {
   toJson() {
     return {
       "name": name,
+      "full_name": full_name,
       "description": description,
       "lastUpdated": lastUpdated,
       "stars": stars,

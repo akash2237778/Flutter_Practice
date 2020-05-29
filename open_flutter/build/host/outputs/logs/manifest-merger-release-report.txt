@@ -13,12 +13,9 @@ MERGED from [com.google.firebase:firebase-auth:19.3.1] /home/akash/.gradle/cache
 MERGED from [:firebase_database] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-3.1.6/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-15:12
 MERGED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:15:1-38:12
 MERGED from [:google_sign_in] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
-MERGED from [:firebase_auth_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
-MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_core_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_dynamic_links] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_dynamic_links-0.3.0/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-14:12
-MERGED from [:url_launcher_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+6/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/eed0e1c992d5de834407367840042599/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/71acc69287ff40f74223e0eb4ca3be72/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/509a83f83e0c4670b834955c78a2195c/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -127,10 +124,10 @@ MERGED from [:firebase_database] /home/akash/development/flutter/.pub-cache/host
 MERGED from [:firebase_database] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-3.1.6/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:28:5-36:19
-MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-13:19
 MERGED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
 MERGED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
+MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.android.gms:play-services-measurement:17.4.0] /home/akash/.gradle/caches/transforms-2/files-2.1/2f875a184f8f4b38d9ff99efca59d21b/play-services-measurement-17.4.0/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:17.4.0] /home/akash/.gradle/caches/transforms-2/files-2.1/2f875a184f8f4b38d9ff99efca59d21b/play-services-measurement-17.4.0/AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.4.0] /home/akash/.gradle/caches/transforms-2/files-2.1/2f26b827c7082388b2f08aecefb0adf6/play-services-measurement-api-17.4.0/AndroidManifest.xml:26:5-34:19
@@ -176,7 +173,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/akash
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/akash/.gradle/caches/transforms-2/files-2.1/d207069e41a209936457731d3a884f16/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-29
+		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-36
 	android:icon
 		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:19:9-43
 	android:name
@@ -241,18 +238,12 @@ MERGED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/c
 MERGED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:19:5-21:41
 MERGED from [:google_sign_in] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_core_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_dynamic_links] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_dynamic_links-0.3.0/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_dynamic_links] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_dynamic_links-0.3.0/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+6/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_web] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+6/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/eed0e1c992d5de834407367840042599/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/eed0e1c992d5de834407367840042599/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/akash/.gradle/caches/transforms-2/files-2.1/71acc69287ff40f74223e0eb4ca3be72/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
@@ -455,12 +446,6 @@ ADDED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/ca
 		ADDED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:34:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-database:19.3.0] /home/akash/.gradle/caches/transforms-2/files-2.1/ce288534b875bbfd6145b265cbff66bf/firebase-database-19.3.0/AndroidManifest.xml:33:17-109
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:17-123
 activity#io.flutter.plugins.urllauncher.WebViewActivity
 ADDED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:8:9-11:74
 	android:exported
@@ -469,6 +454,12 @@ ADDED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub
 		ADDED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:11:13-71
 	android:name
 		ADDED from [:url_launcher] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.10/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:13-74
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_core] /home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:17-123
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement:17.4.0] /home/akash/.gradle/caches/transforms-2/files-2.1/2f875a184f8f4b38d9ff99efca59d21b/play-services-measurement-17.4.0/AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:17.4.0] /home/akash/.gradle/caches/transforms-2/files-2.1/2f26b827c7082388b2f08aecefb0adf6/play-services-measurement-api-17.4.0/AndroidManifest.xml:24:5-68
