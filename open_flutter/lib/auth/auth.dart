@@ -6,6 +6,7 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:toast/toast.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:openflutter/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -21,7 +22,7 @@ class SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(160, 204, 57, 2),
         title: Text(widget.title),
         actions: <Widget>[
           Builder(builder: (BuildContext context) {
@@ -47,12 +48,20 @@ class SignInPageState extends State<SignInPage> {
         ],
       ),
       body: Builder(builder: (BuildContext context) {
-        return ListView(
-          scrollDirection: Axis.vertical,
-          children: <Widget>[
-            _EmailPasswordForm(),
+        return Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("images/loginBG.jpeg"),
+                fit: BoxFit.fill
+            ),
+          ),
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              _EmailPasswordForm(),
 
-          ],
+            ],
+          ),
         );
       }),
     );
@@ -88,7 +97,7 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
     return Form(
       key: _formKey,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 20 , left: 20),
@@ -130,6 +139,18 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
                 }
               },
               child: const Text('Submit', style: TextStyle(color: Colors.white),),
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: RaisedButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              onPressed: ()  {
+                _launchURL('https://www.upesopen.org/');
+              },
+              child: const Text('Join Us', style: TextStyle(color: Colors.white),),
             ),
           ),
           Container(
@@ -185,4 +206,11 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
   }
 
 
+}
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
 }

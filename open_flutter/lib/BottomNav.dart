@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:twitter_api/twitter_api.dart';
 
 FirebaseApp app;
 DatabaseReference db;
@@ -28,7 +29,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
   final widgetOptions = [
     homeContainer(),
     newsContainer(),
-    Text('Favourites'),
+    Text('Feature Coming Soon'),
   ];
 
   @override
@@ -97,6 +98,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
 
 Container homeContainer() {
   return Container(
+    color: Color.fromRGBO(160, 204, 57, 2),
     child: FirebaseAnimatedList(
         query: FirebaseDatabase.instance.reference().child("CommunityPosts"),
         reverse: false,
@@ -158,6 +160,7 @@ Container homeContainer() {
         }),
   );
 }
+
 
 Container newsContainer() {
   return Container(

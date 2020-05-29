@@ -24,7 +24,15 @@ class _OurVisionState extends State<OurVision> {
   }
 
   Widget bodyWidget(){
-    return ListView(
+    return Container(
+        decoration: BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("images/aboutusBG.jpeg"),
+    fit: BoxFit.fill
+    ),
+    ),
+    );
+    /*ListView(
       children: <Widget>[
         carouselImg('https://www.upesopen.org/img/mission.png'),
         Card(
@@ -113,6 +121,6 @@ class _OurVisionState extends State<OurVision> {
           ),
         ),
       ],
-    );
+    );*/
   }
 }

@@ -40,6 +40,8 @@ dependencies:
   firebase_database: ^3.1.5
   js: ^0.6.1+1
   url_launcher: ^5.4.10
+  twitter_api: ^0.1.2
+  github: ^6.0.0
 
 dev_dependencies:
   flutter_test:

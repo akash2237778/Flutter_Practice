@@ -176,7 +176,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/akash
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/akash/.gradle/caches/transforms-2/files-2.1/d207069e41a209936457731d3a884f16/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-36
+		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-29
 	android:icon
 		ADDED from /home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:19:9-43
 	android:name
