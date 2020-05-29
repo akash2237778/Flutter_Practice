@@ -43,6 +43,7 @@ dependencies:
   twitter_api: ^0.1.2
   github: ^6.0.0
   insta_html_parser: ^0.1.1
+  curl: ^1.0.0
 
 dev_dependencies:
   flutter_test:

@@ -62,6 +62,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "curl",
+      "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/curl-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///home/akash/development/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.1.0",
       "packageUri": "lib/",
@@ -362,7 +368,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-05-29T19:32:51.645925Z",
+  "generated": "2020-05-29T20:29:53.146028Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-8.2.beta"
 }

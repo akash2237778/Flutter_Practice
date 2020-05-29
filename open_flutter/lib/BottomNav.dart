@@ -9,6 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:insta_html_parser/insta_html_parser.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
+
+
 
 FirebaseApp app;
 DatabaseReference db;
@@ -16,6 +19,14 @@ FeedItem feedItem;
 List<FeedItem> items = List();
 DatabaseReference communityPosts;
 double itemWidth;
+bool postsLoaded = false;
+
+var _scaffoldKey = new GlobalKey<ScaffoldState>();
+TextEditingController _profileUrlController = TextEditingController();
+TextEditingController _postUrlController = TextEditingController();
+TextStyle _textStyleBold = TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold);
+TextStyle _textStyleUrl = TextStyle(fontSize: 16.0);
+List<Widget> _parsedWidgets = [];
 
 Future<void> fbSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +40,8 @@ class HomeBottomNav extends StatefulWidget {
 }
 
 class _HomeBottomNavState extends State<HomeBottomNav> {
+
+
   int selectedIndex = 0;
 
   final widgetOptions = [
@@ -37,16 +50,20 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
     githubContainer()
   ];
 
+
+
   @override
   void initState() {
     fbSetup();
     feedItem = FeedItem('', '', '');
     // TODO: implement initState
-
+    allAsyncTasks();
     communityPosts = db.reference().child('CommunityPosts');
 
     communityPosts.onChildAdded.listen(_onEntryAdded);
     communityPosts.onChildChanged.listen(_onEntryChanged);
+    _profileUrlController.text = 'https://www.instagram.com/_o.p.e.n_/';
+    _postUrlController.text = 'https://www.instagram.com/_o.p.e.n_/';
 
     super.initState();
   }
@@ -166,71 +183,105 @@ Container homeContainer() {
   );
 }
 
+List<String> imgUrls = [];
+List<String> postString = [];
 
-Expanded newsContainer() {
-  return Expanded(
-    child: Container(
-      child: FirebaseAnimatedList(
-          query: FirebaseDatabase.instance.reference().child("News"),
-          reverse: false,
-          itemBuilder:
-              (_, DataSnapshot snapshot, Animation<double> animation, int x) {
-            FeedItemNews n = FeedItemNews.fromSnapshot(snapshot);
-            print("News");
-            return Card(
-              margin: EdgeInsets.only(top: 1, left: 1, right: 1),
-              elevation: 5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    width: itemWidth,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: 10, bottom: 5, right: 10, left: 10),
-                          child: Text(
-                            n.title,
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                fontSize: 20),
-                          ),
+Future<void> allAsyncTasks() async {
+  List<String> _postsUrls = await InstaParser.postsUrlsFromProfile('https://www.instagram.com/_o.p.e.n_/');
+  print(_postsUrls);
+  //print('hii');
+  imgUrls.clear();
+  postString.clear();
+
+  for(int i =0; i< _postsUrls.length ; i++) {
+    Map<String, String> photosUrls = await InstaParser.photoUrlsFromPost('${_postsUrls[i]}');
+    imgUrls.add(photosUrls['large']);
+
+    var req2 = await http.get('https://api.instagram.com/oembed/?url=' +  _postsUrls[i]);
+    var re = RegExp(r'(?<="title": ")(.*)(?=", "author_name)');
+    var match = re.firstMatch(req2.body.toString());
+    if (match != null) {
+      var s = match.group(0).replaceAll('\\n', '');
+      s = s.replaceAll('@', ' ');
+
+      print(s);
+      postString.add(s);
+    }
+    else{
+      postString.add('_o.p.e.n_');
+    }
+  }
+  //print(imgUrls);
+  postsLoaded = true;
+ 
+  print(postString);
+
+}
+
+Container newsContainer() {
+  return Container(
+    child: ListView.builder(
+      itemCount: imgUrls.length,
+      itemBuilder: (context, index) {
+        return Container(
+          child: Card(
+            child: Column(
+              children: [
+                Image(
+                  image: NetworkImage(imgUrls[index]),
+                  fit: BoxFit.fitWidth,
+                ),
+                Text(
+                  postString[index],
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      fontSize: 20),
+                ),
+              ],
+            ),
+          ),
+
+          /* Card(
+          color: Colors.white,
+          margin: EdgeInsets.only(top: 1, left: 1, right: 1),
+          elevation: 5,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Center(
+                child: Container(
+                  width: MediaQuery.of(context).size.width-5,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image(
+                        image: NetworkImage(imgUrls[index]),
+                        fit: BoxFit.fitWidth,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 10, bottom: 5, right: 10, left: 10),
+                        child: Text(
+                          postString[index],
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 20),
                         ),
-                        Padding(
-                            padding: EdgeInsets.only(left: 12, bottom: 10),
-                            child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
-                      ],
-                    ),
+                      ),
+
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image(
-                      height: 100,
-                      width: 100,
-                      image: NetworkImage(n.postImgUrl),
-                      fit: BoxFit.fitHeight,
-                      loadingBuilder: (BuildContext context, Widget child,
-                          ImageChunkEvent loadingProgress) {
-                        if (loadingProgress == null) return child;
-                        return Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                loadingProgress.expectedTotalBytes
-                                : null,
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ],
+                ),
               ),
-            );
-          }),
-    ),
-  );
+
+            ],
+          ),
+        ),);*/
+
+        );
+      })
+        );
 }
 
 _launchURL(String url) async {
