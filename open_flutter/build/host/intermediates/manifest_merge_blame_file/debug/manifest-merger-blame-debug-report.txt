@@ -48,8 +48,8 @@
 33        android:debuggable="true"
 34        android:icon="@mipmap/ic_launcher"
 34-->/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:19:9-43
-35        android:label="OPEN" >
-35-->/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-29
+35        android:label="openflutter" >
+35-->/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:18:9-36
 36        <activity
 36-->/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/AndroidManifest.xml:20:9-38:20
 37            android:name="akashsaini.com.openflutter.host.MainActivity"

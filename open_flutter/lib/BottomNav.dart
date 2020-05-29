@@ -29,7 +29,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
   final widgetOptions = [
     homeContainer(),
     newsContainer(),
-    Text('Feature Coming Soon'),
+    githubContainer()
   ];
 
   @override
@@ -226,6 +226,81 @@ Container newsContainer() {
   );
 }
 
+Container githubContainer() {
+  return Container(
+    child: FirebaseAnimatedList(
+        query: FirebaseDatabase.instance.reference().child("Github"),
+        reverse: false,
+        itemBuilder:
+            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
+          FeedItemGithub n = FeedItemGithub.fromSnapshot(snapshot);
+          print("github");
+          return Card(
+            margin: EdgeInsets.only(top: 1, left: 1, right: 1),
+            elevation: 5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  width: itemWidth,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 10, bottom: 5, right: 10, left: 10),
+                        child: Text(
+                          n.name,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 20),
+                        ),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.only(left: 12, bottom: 10),
+                          child: Text(n.description,style: TextStyle(color: Colors.blueGrey),)),
+                      Padding(
+                        padding: EdgeInsets.only(left: 12, bottom: 10),
+                        child: Row(
+                          children: [
+                            Text('Last Updated : '),
+                            Text(n.lastUpdated),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Image.asset('images/fork.png' , width: 30 , height:  30,),
+                          Text(n.fork.toString()),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Icon(Icons.star_border),
+                          Text(n.stars.toString()),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+
+              ],
+            ),
+          );
+        }),
+  );
+}
+
 
 /*
 ListView recyclerList() {
@@ -293,6 +368,37 @@ class FeedItemNews {
     };
   }
 }
+
+class FeedItemGithub {
+  String key;
+  String name;
+  String description;
+  int fork;
+  String lastUpdated;
+  int stars;
+
+  FeedItemGithub(this.name, this.description, this.fork , this.lastUpdated , this.stars);
+
+
+  FeedItemGithub.fromSnapshot(DataSnapshot snapshot)
+      : key = snapshot.key,
+        name = snapshot.value["name"],
+        description = snapshot.value["description"],
+        fork = snapshot.value["fork"],
+        stars = snapshot.value["stars"],
+        lastUpdated = snapshot.value['lastUpdated'];
+
+  toJson() {
+    return {
+      "name": name,
+      "description": description,
+      "lastUpdated": lastUpdated,
+      "stars": stars,
+      "fork": fork,
+    };
+  }
+}
+
 
 
 class FeedItem {

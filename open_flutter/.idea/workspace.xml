@@ -2,404 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e9f1e1c-983e-40d1-8495-518443448afe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/adopt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/bottomBG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/contribute.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/educate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/homeBG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/loginBG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sideBG.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/.transforms/f6749a5711e99f92e63d600984c17cd7.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/generated/source/buildConfig/debug/akashsaini/com/openflutter/BuildConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/annotation_processor_list/debug/annotationProcessors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/annotations_typedef_file/debug/extractDebugAnnotations/typedefs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/FontManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/fonts/MaterialIcons-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/ibm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/linuxfoundation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/logomain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/techmint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/upes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/images/xebia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/isolate_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/2.0x/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/3.0x/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/packages/rflutter_alert/assets/images/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_assets/vm_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/flutter_build.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/flutter/debug/libs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/packageDebugAssets/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/javac/debug/classes/akashsaini/com/openflutter/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/javac/debug/classes/io/flutter/plugins/GeneratedPluginRegistrant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/AssetManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/FontManifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/fonts/MaterialIcons-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/ibm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/linuxfoundation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/logomain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/techmint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/upes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/images/xebia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/isolate_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/2.0x/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/2.0x/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/3.0x/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/3.0x/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/icon_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/icon_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/icon_success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/packages/rflutter_alert/assets/images/icon_warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_assets/debug/out/flutter_assets/vm_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_java_res/debug/res.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/library_manifest/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/local_only_symbol_list/debug/parseDebugLibraryResources/R-def.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/packaged-classes/debug/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/packaged-classes/debug/libs/libs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/intermediates/symbols/debug/R.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/outputs/aar/flutter-debug.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/build/tmp/packLibsflutterBuildDebug/MANIFEST.MF" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/fork.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/include_flutter.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/.android/include_flutter.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/.ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/debug/r/io/flutter/plugins/firebase_core_web/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/generated/not_namespaced_r_class_sources/debug/r/io/flutter/plugins/firebaseauth_web/R.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/multi-v2/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/multi-v2/release.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/dex/debug/mergeDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/dex/debug/mergeDexDebug/out/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/eQx7qtCmszonKtNGt1sWVJgLnJs=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/eQx7qtCmszonKtNGt1sWVJgLnJs=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-land/values-land.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-port/values-port.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-v28/values-v28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v21/values-watch-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/ZYmIPVBxg2Ur9_wb0YddWgIU2qs=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/ZYmIPVBxg2Ur9_wb0YddWgIU2qs=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$dimen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$id.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$integer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$string.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R$styleable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebase_core_web/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$dimen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$id.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$integer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$string.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$style.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R$styleable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/javac/debug/classes/io/flutter/plugins/firebaseauth_web/R.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libapp.so" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libapp.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$attr.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$color.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$dimen.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$drawable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$id.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$integer.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$layout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$string.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$style.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R$styleable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebase_core_web/R.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$attr.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$color.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$dimen.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$drawable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$id.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$integer.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$layout.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$string.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$style.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R$styleable.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/host/intermediates/transforms/dexBuilder/debug/0/io/flutter/plugins/firebaseauth_web/R.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/release/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/release/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/BottomNav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BottomNav.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DevloperProfile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DevloperProfile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/OurVision.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OurVision.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/auth/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
