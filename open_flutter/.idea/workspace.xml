@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e9f1e1c-983e-40d1-8495-518443448afe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+    <list default="true" id="0e9f1e1c-983e-40d1-8495-518443448afe" name="Default Changelist" comment="Github API UI">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/zip-cache/28gCYgraS3G9Fisbpx_DTc2KKrA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/qrzAza5oTDHIwhPioU232hUMFT4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/BottomNav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BottomNav.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

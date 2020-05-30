@@ -46,7 +46,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
 
   final widgetOptions = [
     homeContainer(),
-    newsContainer(),
+    socialContainer(),
     githubContainer()
   ];
 
@@ -57,13 +57,13 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
     fbSetup();
     feedItem = FeedItem('', '', '');
     // TODO: implement initState
-    allAsyncTasks();
     communityPosts = db.reference().child('CommunityPosts');
 
     communityPosts.onChildAdded.listen(_onEntryAdded);
     communityPosts.onChildChanged.listen(_onEntryChanged);
     _profileUrlController.text = 'https://www.instagram.com/_o.p.e.n_/';
     _postUrlController.text = 'https://www.instagram.com/_o.p.e.n_/';
+    allAsyncTasks();
 
     super.initState();
   }
@@ -100,7 +100,7 @@ class _HomeBottomNavState extends State<HomeBottomNav> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.announcement), title: Text('News')),
+              icon: Icon(Icons.rss_feed), title: Text('Social')),
           BottomNavigationBarItem(
               icon: Icon(Icons.assignment), title: Text('Projects')),
         ],
@@ -191,97 +191,38 @@ Future<void> allAsyncTasks() async {
   print(_postsUrls);
   //print('hii');
   imgUrls.clear();
-  postString.clear();
 
   for(int i =0; i< _postsUrls.length ; i++) {
     Map<String, String> photosUrls = await InstaParser.photoUrlsFromPost('${_postsUrls[i]}');
     imgUrls.add(photosUrls['large']);
-
-    var req2 = await http.get('https://api.instagram.com/oembed/?url=' +  _postsUrls[i]);
-    var re = RegExp(r'(?<="title": ")(.*)(?=", "author_name)');
-    var match = re.firstMatch(req2.body.toString());
-    if (match != null) {
-      var s = match.group(0).replaceAll('\\n', '');
-      s = s.replaceAll('@', ' ');
-
-      print(s);
-      postString.add(s);
-    }
-    else{
-      postString.add('_o.p.e.n_');
-    }
-  }
+ }
   //print(imgUrls);
   postsLoaded = true;
+  print(imgUrls);
  
-  print(postString);
 
 }
 
-Container newsContainer() {
+Container socialContainer() {
   return Container(
-    child: ListView.builder(
-      itemCount: imgUrls.length,
-      itemBuilder: (context, index) {
-        return Container(
-          child: Card(
-            child: Column(
-              children: [
-                Image(
-                  image: NetworkImage(imgUrls[index]),
-                  fit: BoxFit.fitWidth,
+    child: FirebaseAnimatedList(
+      query: FirebaseDatabase.instance.reference().child("Social"),
+        reverse: false,
+        itemBuilder:
+            (_, DataSnapshot snapshot, Animation<double> animation, int x) {
+              FeedItemNews s = FeedItemNews.fromSnapshot(snapshot);
+              print("github");
+              return Card(
+                child: Column(
+                  children: [
+                    loadImg(imgUrls[x]),
+
+                   // Text(s.description),
+                  ],
                 ),
-                Text(
-                  postString[index],
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      fontSize: 20),
-                ),
-              ],
-            ),
-          ),
-
-          /* Card(
-          color: Colors.white,
-          margin: EdgeInsets.only(top: 1, left: 1, right: 1),
-          elevation: 5,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Center(
-                child: Container(
-                  width: MediaQuery.of(context).size.width-5,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image(
-                        image: NetworkImage(imgUrls[index]),
-                        fit: BoxFit.fitWidth,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: 10, bottom: 5, right: 10, left: 10),
-                        child: Text(
-                          postString[index],
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontSize: 20),
-                        ),
-                      ),
-
-                    ],
-                  ),
-                ),
-              ),
-
-            ],
-          ),
-        ),);*/
-
-        );
-      })
-        );
+              );
+            }),
+  );
 }
 
 _launchURL(String url) async {
@@ -426,26 +367,24 @@ ListView recyclerList() {
 
 class FeedItemNews {
   String key;
-  String title;
+ // String title;
   String description;
-  String postImgUrl;
+ // String postImgUrl;
 
-  FeedItemNews(this.title, this.description, this.postImgUrl);
-  String fbString() {
-    return "{ 'title': '$title', 'description': '$description' , 'postImgUrl': '$postImgUrl' }";
-  }
+  //FeedItemNews(this.title, this.description, this.postImgUrl);
+  FeedItemNews( this.description,);
 
   FeedItemNews.fromSnapshot(DataSnapshot snapshot)
       : key = snapshot.key,
-        title = snapshot.value["title"],
-        description = snapshot.value["description"],
-        postImgUrl = snapshot.value["postImgUrl"];
+ //       title = snapshot.value["title"],
+        description = snapshot.value["description"];
+   //     postImgUrl = snapshot.value["postImgUrl"];
 
   toJson() {
     return {
-      "title": title,
+     // "title": title,
       "description": description,
-      "postImgUrl": postImgUrl,
+    //  "postImgUrl": postImgUrl,
     };
   }
 }
@@ -513,8 +452,8 @@ class FeedItem {
 
 Image loadImg(String url) {
   return Image(
-    height: 100,
-    width: 100,
+   // height: 100,
+    //width: 100,
     image: NetworkImage(url),
     fit: BoxFit.fitHeight,
     loadingBuilder:
