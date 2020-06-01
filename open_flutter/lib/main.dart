@@ -638,6 +638,9 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
       case 'Login':
         Navigator.pushNamed(context, '/signIn');
         break;
+      case 'Feedback':
+        _launchURL('https://github.com/upes-open/Open-Mobile/issues');
+        break;
     }
   }
 
@@ -651,7 +654,7 @@ class _MainNavDrawerState extends State<MainNavDrawer> {
           PopupMenuButton<String>(
             onSelected: handleClick,
             itemBuilder: (BuildContext context) {
-              return {isLoggedIn ? 'Logout' : 'Login', 'Dev'}.map((String choice) {
+              return {isLoggedIn ? 'Logout' : 'Login', 'Dev' , 'Feedback'}.map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
                   child: Text(choice),

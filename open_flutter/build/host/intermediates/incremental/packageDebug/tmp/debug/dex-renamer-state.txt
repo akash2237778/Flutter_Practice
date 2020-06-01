@@ -1,4 +1,4 @@
-#Sat May 30 14:32:49 IST 2020
+#Sat May 30 23:47:52 IST 2020
 base.0=/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

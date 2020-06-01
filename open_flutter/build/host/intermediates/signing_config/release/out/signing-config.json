@@ -1,1 +1,1 @@
-{"mName":"debug","mStoreFile":"/home/akash/.android/debug.keystore","mStorePassword":"android","mKeyAlias":"AndroidDebugKey","mKeyPassword":"android","mStoreType":"jks","mV1SigningEnabled":true,"mV2SigningEnabled":true}
+{"mName":"externalOverride","mStoreFile":"/home/akash/keyopen.jks","mStorePassword":"upesopen@123","mKeyAlias":"keyopen","mKeyPassword":"upesopen@123","mStoreType":"jks","mV1SigningEnabled":false,"mV2SigningEnabled":false}

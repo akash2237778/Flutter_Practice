@@ -360,6 +360,10 @@
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/dbfc2b1c3fa1dd492b0e4be1887229ea/appcompat-1.0.2/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/dbfc2b1c3fa1dd492b0e4be1887229ea/appcompat-1.0.2/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
     },
@@ -386,6 +390,10 @@
     {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/color-v23_abc_tint_default.xml.flat",
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/dbfc2b1c3fa1dd492b0e4be1887229ea/appcompat-1.0.2/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -772,6 +780,10 @@
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/dbfc2b1c3fa1dd492b0e4be1887229ea/appcompat-1.0.2/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/drawable_common_google_signin_btn_text_dark_normal.xml.flat",
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/39b97f95988fecd46e568c6ae34a8e0d/play-services-base-17.1.0/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
@@ -1114,6 +1126,10 @@
     {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/anim_abc_popup_enter.xml.flat",
         "source": "/home/akash/.gradle/caches/transforms-2/files-2.1/dbfc2b1c3fa1dd492b0e4be1887229ea/appcompat-1.0.2/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/akash/Desktop/Flutter/open_flutter/.android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/akash/Desktop/Flutter/open_flutter/build/host/intermediates/res/merged/release/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",

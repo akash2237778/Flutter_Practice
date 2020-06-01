@@ -2,6 +2,12 @@ def flutterPluginVersion = 'managed'
 
 apply plugin: 'com.android.application'
 
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('.android/key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
     compileSdkVersion 28
 
@@ -17,16 +23,27 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+
+        release {
+            //if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+            storeFile file("/home/akash/Desktop/Flutter/open_flutter/.android/key.properties")
+            storePassword "upesopen@123"
+            keyAlias "keyopen"
+            keyPassword "upesopen@123"
+            // }
+        }
+    }
 
     buildTypes {
         profile {
             initWith debug
         }
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
+
+
     }
 
 }

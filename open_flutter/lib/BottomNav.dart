@@ -185,9 +185,9 @@ Container homeContainer() {
 
 List<String> imgUrls = [];
 List<String> postString = [];
-
+List<String> _postsUrls = [];
 Future<void> allAsyncTasks() async {
-  List<String> _postsUrls = await InstaParser.postsUrlsFromProfile('https://www.instagram.com/_o.p.e.n_/');
+  _postsUrls = await InstaParser.postsUrlsFromProfile('https://www.instagram.com/_o.p.e.n_/');
   print(_postsUrls);
   //print('hii');
   imgUrls.clear();
@@ -212,13 +212,64 @@ Container socialContainer() {
             (_, DataSnapshot snapshot, Animation<double> animation, int x) {
               FeedItemNews s = FeedItemNews.fromSnapshot(snapshot);
               print("github");
-              return Card(
-                child: Column(
-                  children: [
-                    loadImg(imgUrls[x]),
-
-                   // Text(s.description),
-                  ],
+              return FlatButton(
+                padding: EdgeInsets.all(0),
+                onPressed: (){
+                  _launchURL(_postsUrls[x]);
+                },
+                child: Container(
+                  height: 450,
+                  child: Card(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image(
+                                    image: AssetImage('images/logomain.png'),
+                                    width: 30,
+                                    height: 30,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8.0),
+                                    child: Text('_o.p.e.n_'),
+                                  ),
+                                ],
+                              ),
+                              Image(
+                                image: AssetImage('images/instagram.png'),
+                                width: 25,
+                                height: 25,
+                              ),
+                            ],
+                          ),
+                        ),
+                            Image(
+                              height: 395,
+                              //width: 100,
+                              image: NetworkImage(imgUrls[x]),
+                              fit: BoxFit.fitHeight,
+                              loadingBuilder:
+                                  (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
+                                if (loadingProgress == null) return child;
+                                return Center(
+                                  child: CircularProgressIndicator(
+                                    value: loadingProgress.expectedTotalBytes != null
+                                        ? loadingProgress.cumulativeBytesLoaded /
+                                        loadingProgress.expectedTotalBytes
+                                        : null,
+                                  ),
+                                );
+                              },
+                            ),
+                       // Text(s.description),
+                      ],
+                    ),
+                  ),
                 ),
               );
             }),
