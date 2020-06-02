@@ -2,74 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e9f1e1c-983e-40d1-8495-518443448afe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.android/Flutter/flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.android/Flutter/flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/.android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/.android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cache.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cache.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/blame/res/release/single/release.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/bundle_manifest/release/processReleaseManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/mergeReleaseResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/packageDebug/tmp/debug/zip-cache/sqJ7Q12TH+_LkrjvsowKrpjHX64=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/ZYmIPVBxg2Ur9_wb0YddWgIU2qs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/packageRelease/tmp/release/zip-cache/xHnm2Re0cEADAOc8YR0btHBc3+U=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeJavaRes/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/incremental/release-mergeNativeLibs/zip-cache/fTJnVgn_u8x3I0ZWOgROb6ooS5w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/instant_app_manifest/release/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_assets/release/out/flutter_assets/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/release/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_java_res/release/out.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_manifests/release/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/merged_native_libs/release/out/lib/x86_64/libflutter.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/signing_config/release/out/signing-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/signing_config/release/out/signing-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/arm64-v8a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a/libapp.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libapp.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/intermediates/stripped_native_libs/release/out/lib/x86_64/libflutter.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/app.apk.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/release/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/apk/release/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/outputs/logs/manifest-merger-release-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/host/reports/lint-results-release-fatal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/BottomNav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BottomNav.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/open_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/open_flutter.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Open-Mobile/Open-Mobile" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
