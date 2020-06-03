@@ -7,7 +7,9 @@ import 'package:firebase/firebase.dart';
 import 'package:http/http.dart' as http;
 
 
+
 import 'package:firebase_database/firebase_database.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 bool _success;
 
@@ -17,13 +19,7 @@ void main() {
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-Future<void> firebaseRegistration() async {
-  final FirebaseUser user = (await _auth.createUserWithEmailAndPassword(
-  email: 'b@gmail.com',
-  password: 'Passwd',
-  ))
-  .user;
-}
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -38,7 +34,6 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     //firebaseRegistration();
 
-
   }
 
 
@@ -51,6 +46,7 @@ class _MyAppState extends State<MyApp> {
   final TextEditingController _gitController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _repasswordController = TextEditingController();
+  final TextEditingController _dobController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   String _userEmail;
 
@@ -99,13 +95,28 @@ class _MyAppState extends State<MyApp> {
                     controller: _gitController,
                     decoration: const InputDecoration(labelText: 'Github Username'),
                     validator: (String value) {
+                      if(value.contains('@')){
+                        return 'type only username';
+                      }
                       if (value.isEmpty) {
                         return 'Please enter Github Username';
                       }
                       return null;
                     },
                   ),
-
+                  TextFormField(
+                   controller: _dobController,
+                    decoration: const InputDecoration(labelText: 'Date of Birth (DD/MM/YYYY)', hintText: 'e.g. 15/12/2000'),
+                    validator: (String value) {
+                      if(!value.contains('/')){
+                        return 'Add / in format DD/MM/YYYY';
+                      }
+                      if (value.contains('/',2) && value.contains('/',5) && value.length == 10) {
+                        return null;
+                      }
+                      return 'Invalid date format';
+                    },
+                  ),
                   TextFormField(
                     obscureText: true,
                     controller: _passwordController,
@@ -130,6 +141,7 @@ class _MyAppState extends State<MyApp> {
                       return null;
                     },
                   ),
+
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     alignment: Alignment.center,
@@ -149,13 +161,23 @@ class _MyAppState extends State<MyApp> {
                         : (_success
                         ? 'Successfully registered ' + _userEmail
                         : 'Registration failed')),
-                  )
+                  ),
+
+
                 ],
               ),
             ),
           )
       ),
     );
+  }
+
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
   void _register() async {
     final FirebaseUser user = (await _auth.createUserWithEmailAndPassword(
@@ -169,10 +191,11 @@ class _MyAppState extends State<MyApp> {
         UserUpdateInfo userUpdateInfo = UserUpdateInfo();
         userUpdateInfo.displayName = _nameController.text;
 
-        fetchAlbum(_nameController.text, _emailController.text , _gitController.text , '15-12-2000');
+        fetchAlbum(_nameController.text, _emailController.text , _gitController.text , _dobController.text);
 
         user.updateProfile(userUpdateInfo);
         _userEmail = user.email;
+
       });
     } else {
       _success = false;
@@ -181,7 +204,7 @@ class _MyAppState extends State<MyApp> {
 
 
   Future<void> fetchAlbum(String name , String email , String git , String dob) async {
-
+    var url;
     //final response = await http.get(Uri.encodeFull("http://18.197.247.183/cgi-bin/userInfo.py?name=" + name + "&email=" + email+ "&git="+ git+"&dob=" + dob));
     var nameArr = new List(3);
     if(name.contains(' ')){
@@ -195,8 +218,19 @@ class _MyAppState extends State<MyApp> {
     emailArr[0] = email.split('@')[0];
     emailArr[1] = email.split('@')[1].split('.')[0];
     emailArr[2] = email.split('@')[1].split('.')[1];
-    var url = "http://18.197.247.183/cgi-bin/userInfo.py?fname=" + nameArr[0] + "&lname=" + nameArr[1] +"&email1=" + emailArr[0]+"&email2=" + emailArr[1]+ "&email3=" + emailArr[2]+"&git="+ git+"&dob=" + dob;
 
+    if(name.contains(' ')) {
+      url = "http://18.197.247.183/cgi-bin/userInfo.py?fname=" + nameArr[0] +
+          "&lname=" + nameArr[1] + "&email1=" + emailArr[0] + "&email2=" +
+          emailArr[1] + "&email3=" + emailArr[2] + "&git=" + git + "&dob=" +
+          dob;
+    }
+    else{
+      url = "http://18.197.247.183/cgi-bin/userInfo.py?fname=" + nameArr[0] +
+           "&email1=" + emailArr[0] + "&email2=" +
+          emailArr[1] + "&email3=" + emailArr[2] + "&git=" + git + "&dob=" +
+          dob;
+    }
     print(url);
     try {
       var response = await http.post(url);
@@ -208,15 +242,19 @@ class _MyAppState extends State<MyApp> {
         print('Done');
         setState(() {
           _success = true;
-        });
+         });
       }
       else{
         setState(() {
           _success = false;
         });
       }
+      if(_success){
+        _launchURL('https://upesopen.org/');
+      }
       print(e);
     }
+
 
   }
 }
