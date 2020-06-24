@@ -1,10 +1,17 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:device_apps/device_apps.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase/firebase.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:http/http.dart' as http;
+import 'package:android_intent/android_intent.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 
 
 
@@ -14,11 +21,25 @@ import 'package:url_launcher/url_launcher.dart';
 bool _success;
 
 void main() {
-  runApp(MyApp());
+  runApp(MainApp());
 }
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
+
+class MainApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Demo',
+      home: MyApp(),
+      routes: <String, WidgetBuilder>{
+        '/redirect': (BuildContext context) => redirectPage(),
+      },
+    );
+  }
+}
 
 
 class MyApp extends StatefulWidget {
@@ -33,6 +54,7 @@ class _MyAppState extends State<MyApp> {
     // TODO: implement initState
     super.initState();
     //firebaseRegistration();
+
 
   }
 
@@ -59,126 +81,194 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      home: Scaffold(
-          body: Container(
-            child: Form(
-              key: _formKey,
+    return  Scaffold(
+          body: Center(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width*0.7 > 500 ? 500 : MediaQuery.of(context).size.width*0.7 ,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  TextFormField(
-                    controller: _nameController,
-                    decoration: const InputDecoration(labelText: 'Name'),
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return 'Please enter some text';
-                      }
-                      return null;
-                    },
-                  ),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Form(
+                    key: _formKey,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                              controller: _nameController,
+                              decoration: InputDecoration(labelText: 'Name',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                                //fillColor: Colors.green
+                              ),
+                              validator: (String value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
 
-                  TextFormField(
-                    controller: _emailController,
-                    decoration: const InputDecoration(labelText: 'Email', hintText: "e.g abc@gmail.com",),
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return 'Please enter Email !';
-                      }
-                      String text;
-                      EmailValidator.validate(value)? text = null: text= 'Invalid Email address';
-                      return text;
-                    },
-                  ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                              controller: _emailController,
+                              decoration: InputDecoration(labelText: 'Email', hintText: "e.g abc@gmail.com",
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                              ),
+                              validator: (String value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter Email !';
+                                }
+                                String text;
+                                EmailValidator.validate(value)? text = null: text= 'Invalid Email address';
+                                return text;
+                              },
+                            ),
+                          ),
 
-                  TextFormField(
-                    controller: _gitController,
-                    decoration: const InputDecoration(labelText: 'Github Username'),
-                    validator: (String value) {
-                      if(value.contains('@')){
-                        return 'type only username';
-                      }
-                      if (value.isEmpty) {
-                        return 'Please enter Github Username';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                   controller: _dobController,
-                    decoration: const InputDecoration(labelText: 'Date of Birth (DD/MM/YYYY)', hintText: 'e.g. 15/12/2000'),
-                    validator: (String value) {
-                      if(!value.contains('/')){
-                        return 'Add / in format DD/MM/YYYY';
-                      }
-                      if (value.contains('/',2) && value.contains('/',5) && value.length == 10) {
-                        return null;
-                      }
-                      return 'Invalid date format';
-                    },
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    controller: _passwordController,
-                    decoration: const InputDecoration(labelText: 'Password', hintText: '1 Upper case, 1 lowercase, 1 Numeric Number, 1 Special Character' ),
-                    validator: (String value) {
-                      if (value.isEmpty) {
-                        return 'Please enter password';
-                      }
-                      String txt;
-                      validateStructure(value)? txt = null: txt='Weak Password';
-                      return txt;
-                    },
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    controller: _repasswordController,
-                    decoration: const InputDecoration(labelText: 'Re-Enter Password', ),
-                    validator: (String value) {
-                      if (value != _passwordController.text) {
-                        return 'Password are not same';
-                      }
-                      return null;
-                    },
-                  ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                              controller: _gitController,
+                              decoration: InputDecoration(labelText: 'Github Username',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                              ),
+                              validator: (String value) {
+                                if(value.contains('@')){
+                                  return 'type only username';
+                                }
+                                if (value.isEmpty) {
+                                  return 'Please enter Github Username';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                             controller: _dobController,
+                              decoration: InputDecoration(labelText: 'Date of Birth (DD/MM/YYYY)', hintText: 'e.g. 15/12/2000',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                              ),
+                              validator: (String value) {
+                                if(!value.contains('/')){
+                                  return 'Add / in format DD/MM/YYYY';
+                                }
+                                if (value.contains('/',2) && value.contains('/',5) && value.length == 10) {
+                                  return null;
+                                }
+                                return 'Invalid date format';
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                              obscureText: true,
+                              controller: _passwordController,
+                              decoration: InputDecoration(labelText: 'Password', hintText: '1 Upper case, 1 lowercase, 1 Numeric Number, 1 Special Character',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                              ),
+                              validator: (String value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter password';
+                                }
+                                String txt;
+                                validateStructure(value)? txt = null: txt='Weak Password';
+                                return txt;
+                              },
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: TextFormField(
+                              obscureText: true,
+                              controller: _repasswordController,
+                              decoration: InputDecoration(labelText: 'Re-Enter Password',
+                                fillColor: Colors.white,
+                                border: new OutlineInputBorder(
+                                  borderRadius: new BorderRadius.circular(25.0),
+                                  borderSide: new BorderSide(
+                                  ),
+                                ),
+                              ),
+                              validator: (String value) {
+                                if (value != _passwordController.text) {
+                                  return 'Password are not same';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
 
-                  Container(
-                    padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    alignment: Alignment.center,
-                    child: RaisedButton(
-                      onPressed: () async {
-                        if (_formKey.currentState.validate()) {
-                          _register();
-                        }
-                      },
-                      child: const Text('Submit'),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(vertical: 16.0),
+                              alignment: Alignment.center,
+                              child: RaisedButton(
+                                onPressed: () async {
+                                  if (_formKey.currentState.validate()) {
+                                    _register();
+                                  }
+                                },
+                                child: const Text('Submit'),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            child: Text(_success == null
+                                ? ''
+                                : (_success
+                                ? 'Successfully registered ' + _userEmail
+                                : 'Registration failed')),
+                          ),
+
+
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    child: Text(_success == null
-                        ? ''
-                        : (_success
-                        ? 'Successfully registered ' + _userEmail
-                        : 'Registration failed')),
-                  ),
-
-
                 ],
               ),
             ),
           )
-      ),
-    );
+      );
+
   }
 
-  _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+
   void _register() async {
     final FirebaseUser user = (await _auth.createUserWithEmailAndPassword(
       email: _emailController.text,
@@ -250,7 +340,7 @@ class _MyAppState extends State<MyApp> {
         });
       }
       if(_success){
-        _launchURL('https://upesopen.org/');
+        Navigator.pushNamed(context, '/redirect' );
       }
       print(e);
     }
@@ -258,6 +348,77 @@ class _MyAppState extends State<MyApp> {
 
   }
 }
+
+
+_launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+class redirectPage extends StatefulWidget {
+  @override
+  _redirectPageState createState() => _redirectPageState();
+}
+
+class _redirectPageState extends State<redirectPage> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+
+
+    //if(Device.get().isAndroid){
+   // _openJioSavaan('JioSavaan');
+   // }
+  //  else{
+     _launchURL('https://www.upesopen.org/');
+    //}
+  }
+
+  _openJioSavaan (data) async
+  {String dt = data['JioSavaan'] as String;
+  bool isInstalled = await DeviceApps.isAppInstalled('com.jio.media.jiobeats');
+  if (isInstalled != false)
+  {
+    AndroidIntent intent = AndroidIntent(
+        action: 'action_view',
+        data: dt
+    );
+    await intent.launch();
+  }
+  else
+  {
+    String url = dt;
+    if (await canLaunch(url))
+      await launch(url);
+    else
+      throw 'Could not launch $url';
+  }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Registered Successfully, open to andriod App to login !'),
+              ],
+            ),
+          ),
+        ),
+      );
+  }
+}
+
 
 
 

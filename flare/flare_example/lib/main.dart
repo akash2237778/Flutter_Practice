@@ -13,10 +13,33 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Rockin\' Penguin',
       theme: new ThemeData(primarySwatch: Colors.blue),
-      home: new MyHomePage(title: 'Rockin\' Penguin'),
+      home: Anim(),
     );
   }
 }
+
+class Anim extends StatefulWidget {
+  @override
+  _AnimState createState() => _AnimState();
+}
+
+class _AnimState extends State<Anim> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: FlareActor("Assets/OPEN.flr",
+        alignment: Alignment.center,
+        fit: BoxFit.fitWidth,
+          isPaused: false,
+          color: Colors.blue,
+          animation: 'Wind',
+        )
+      ),
+    );
+  }
+}
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
