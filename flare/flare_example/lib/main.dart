@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Rockin\' Penguin',
       theme: new ThemeData(primarySwatch: Colors.blue),
-      home: Anim(),
+      home: WrkAnim(),
     );
   }
 }
@@ -35,6 +35,27 @@ class _AnimState extends State<Anim> {
           color: Colors.blue,
           animation: 'Wind',
         )
+      ),
+    );
+  }
+}
+
+class WrkAnim extends StatefulWidget {
+  @override
+  _WrkAnimState createState() => _WrkAnimState();
+}
+
+class _WrkAnimState extends State<WrkAnim> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+          child: FlareActor("Assets/intro.flr",
+            alignment: Alignment.center,
+            fit: BoxFit.fitWidth,
+            isPaused: false,
+            animation: 'coding',
+          )
       ),
     );
   }
