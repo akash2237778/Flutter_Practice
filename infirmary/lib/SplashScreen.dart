@@ -1,7 +1,11 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:infirmary/Auth/GoogleSignIn.dart';
+import 'package:infirmary/Auth/Register.dart';
+import 'package:infirmary/Auth/SignIn.dart';
 import 'package:infirmary/homeScreen.dart';
 
 import 'main.dart';
@@ -12,12 +16,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 1), () {
-      runApp(MaterialApp(home: HomeScreen()));
+      runApp(MaterialApp(home: user ==null ? GoogleSignin() : HomeScreen()));
     });
 
     }

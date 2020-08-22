@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-
+import 'package:infirmary/Drawer.dart';
+import 'homeButtons.dart';
 import 'main.dart';
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -15,55 +17,78 @@ class _HomeScreenState extends State<HomeScreen> {
   
   @override
   Widget build(BuildContext context) {
-    print("Hii");
     return Scaffold(
-      backgroundColor: Colors.grey,
+      appBar: AppBar(
+        title: Text('Infirmary'),
+        backgroundColor: Colors.orange,
+      ),
+      drawer: appDrawer(context),
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 flex: 1,
-                  child: Image(
-                    image: AssetImage('images/doctor.png'),
+                  child: Card(
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('images/doctor.png'),
+                        ),
+                      ],
+                    ),
                   ),
               ),
 
               Expanded(
                 flex: 3,
                 child: Container(
-                  alignment: Alignment.bottomCenter,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                        children: [
-                          home_screen_button('Button1')
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(child: buttonPannel(iconImage: AssetImage('images/google_logo.png')  , iconText: 'Find a Doctor')),
+                            Expanded(child: buttonPannel(icon: Icons.date_range , iconText: 'Appointments')),
+                          ],
+                          ),
                       ),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                          ],
+                        ),
+                      ),
+
                     ],
                   ),
                 ),
-              )
+              ),
+              bottomPannel(),
             ],
           ),
         ),
       ),
     );
   }
-}
-
-Expanded home_screen_button(String buttonText){
-  return Expanded(
-      child: FlatButton(
-        child: Container(
-          decoration: BoxDecoration(
-            color: primaryColor,
-          ),
-          child: Text(buttonText,),
-        ),
-      ),
-  );
 }
