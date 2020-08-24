@@ -30,7 +30,7 @@ Container bottomPannel(){
     decoration: BoxDecoration(
       color: Colors.orange
     ),
-    child: Row(
+    child: Container()/*Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           GestureDetector(
@@ -66,7 +66,7 @@ Container bottomPannel(){
             child: Icon(Icons.message),
           ),
         ],
-    ),
+    ),*/
   );
 }
 

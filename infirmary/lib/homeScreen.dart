@@ -17,6 +17,22 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Padding(
+        padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.087),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FloatingActionButton(
+              shape: Sha,
+              backgroundColor: Colors.black,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.orange,
+                    radius: 22,
+                      child: Icon(Icons.phone , color: Colors.black,)),
+            ),
+          ],
+        ),
+      ),
       appBar: appBar(),
       drawer: appDrawer(context),
       backgroundColor: Colors.black,
