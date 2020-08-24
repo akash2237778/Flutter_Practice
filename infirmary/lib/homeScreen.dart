@@ -1,11 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:infirmary/AppBar.dart';
 import 'package:infirmary/Drawer.dart';
+import 'HomeOperations/Emergency.dart';
+import 'HomeOperations/EmergencyContacts.dart';
 import 'homeButtons.dart';
 import 'main.dart';
-
-
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,15 +14,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Infirmary'),
-        backgroundColor: Colors.orange,
-      ),
+      appBar: appBar(),
       drawer: appDrawer(context),
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -32,50 +28,68 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                flex: 1,
-                  child: Card(
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image(
-                          image: AssetImage('images/doctor.png'),
-                        ),
-                      ],
-                    ),
+                flex: 2,
+                child: Card(
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage('images/doctor.png'),
+                      ),
+                    ],
                   ),
+                ),
               ),
-
               Expanded(
                 flex: 3,
                 child: Container(
                   child: Column(
-
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
                         child: Row(
                           children: [
-                            Expanded(child: buttonPannel(iconImage: AssetImage('images/google_logo.png')  , iconText: 'Find a Doctor')),
-                            Expanded(child: buttonPannel(icon: Icons.date_range , iconText: 'Appointments')),
-                          ],
-                          ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          children: [
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => EmergencyContacts()));
+                                },
+                                child: buttonPannel(
+                                    icon: Icons.contact_mail,
+                                    color: Colors.blue[600],
+                                    iconText: 'Emergency Contacts'),
+                              ),
+                            ),
+                            Expanded(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Emergency()));
+                                  },
+                                  child: buttonPannel(
+                                      icon: Icons.local_hospital,
+                                      color: Colors.red,
+                                      iconText: 'Emergency'),
+                                )),
                           ],
                         ),
                       ),
                       Expanded(
                         child: Row(
                           children: [
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
-                            Expanded(child: buttonPannel(icon: Icons.local_pharmacy , iconText: 'Find a Doctor')),
+                            Expanded(
+                                child: buttonPannel(
+                                    icon: Icons.library_books,
+                                    iconText: 'First Aid')),
+                            Expanded(
+                                child: buttonPannel(
+                                    icon: Icons.open_in_browser,
+                                    color: Colors.green[400],
+                                    iconText: 'Infirmary Status')),
+                            Expanded(
+                                child: buttonPannel(
+                                    icon: Icons.people,
+                                    iconText: 'Traffic')),
                           ],
                         ),
                       ),

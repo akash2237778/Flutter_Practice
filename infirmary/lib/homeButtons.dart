@@ -1,12 +1,13 @@
 
 import 'package:flutter/material.dart';
+import 'package:infirmary/UrlLancher.dart';
 
 import 'main.dart';
 
 
 
 
-Container buttonPannel({IconData icon, String iconText , AssetImage iconImage}){
+Container buttonPannel({IconData icon, String iconText , AssetImage iconImage, Color color=Colors.black}){
   return Container(
     child: Card(
       child: Column(
@@ -14,7 +15,7 @@ Container buttonPannel({IconData icon, String iconText , AssetImage iconImage}){
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           icon != null ?
-          Icon(icon, size: 80,): Image(image: iconImage, height: 80,width: 80,),
+          Icon(icon, color: color, size: 80,): Image(image: iconImage, height: 80,width: 80,),
           SizedBox(height: 10,),
           Text(iconText)
         ],
@@ -34,7 +35,6 @@ Container bottomPannel(){
         children: [
           GestureDetector(
             onTap: (){
-
             },
             child: Icon(Icons.message),
           ),
@@ -45,7 +45,7 @@ Container bottomPannel(){
             child: Icon(Icons.message),
           ),GestureDetector(
             onTap: (){
-
+              launchURL('tel://8882237778');
             },
             child: CircleAvatar(
               radius: 24,

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "413455185693",
+    "firebase_url": "https://infirmary-904de.firebaseio.com",
+    "project_id": "infirmary-904de",
+    "storage_bucket": "infirmary-904de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413455185693:android:1122c92f805e766132d3f4",
+        "android_client_info": {
+          "package_name": "akashsaini.infirmary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413455185693-mkllh3kb5daop1cgdnlt54pbkm934emn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbsRkYPDrtKU7UnhNKyLstgp2jb7ucD-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413455185693-mkllh3kb5daop1cgdnlt54pbkm934emn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
