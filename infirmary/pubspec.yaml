@@ -29,6 +29,8 @@ dependencies:
   location: ^3.0.2
   url_launcher: ^5.5.0
   map: ^0.1.0+1
+  cloud_firestore: ^0.13.5
+  firebase_database: ^3.1.6
 
 
   # The following adds the Cupertino Icons font to your application.

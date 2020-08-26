@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:infirmary/AppBar.dart';
 import 'package:infirmary/Drawer.dart';
+import 'package:infirmary/UrlLancher.dart';
 import 'HomeOperations/Emergency.dart';
 import 'HomeOperations/EmergencyContacts.dart';
 import 'homeButtons.dart';
@@ -19,18 +20,28 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       floatingActionButton: Padding(
         padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.087),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FloatingActionButton(
-              shape: Sha,
-              backgroundColor: Colors.black,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.orange,
-                    radius: 22,
-                      child: Icon(Icons.phone , color: Colors.black,)),
+        child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: new RawMaterialButton(
+              fillColor: Colors.black,
+              shape: new CircleBorder(),
+              elevation: 2.0,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CircleAvatar(
+                  backgroundColor: Colors.orange,
+                  radius: 25,
+                  child: Icon(
+                    Icons.phone,
+                    color: Colors.black,
+                    size: 40,
+                  ),
+                ),
+              ),
+              onPressed: (){
+                launchURL('tel://8882237778');
+              },
             ),
-          ],
         ),
       ),
       appBar: appBar(),
