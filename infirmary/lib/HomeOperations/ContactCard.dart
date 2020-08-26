@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../UrlLancher.dart';
 
 
-Card contactCard(){
+Card contactCard( {String name , String line , String ImgURL , bool isAvailable , String number }){
   return Card(
     child: Container(
       margin: EdgeInsets.all(10),
@@ -18,13 +18,13 @@ Card contactCard(){
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Dr. ABCD', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-                Text('One-liner', style: TextStyle(),),
+                Text(name, style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+                Text(line, style: TextStyle(),),
                 SizedBox(height: 10,),
                 Row(
                   children: [
                     Text('Availability :', style: TextStyle(fontSize: 10),),
-                    Icon(Icons.check_circle, size: 15, color: Colors.green,)
+                    Icon(Icons.check_circle, size: 15, color: isAvailable ? Colors.green : Colors.red,)
                   ],
                 ),
               ],
@@ -33,7 +33,7 @@ Card contactCard(){
           Expanded(
             child: GestureDetector(
               onTap: (){
-                launchURL('tel://8882237778');
+                launchURL('tel://'+number);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
