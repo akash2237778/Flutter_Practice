@@ -11,7 +11,7 @@ Card contactCard( {String name , String line , String ImgURL , bool isAvailable 
         children: [
           CircleAvatar(
             radius: 40,
-            backgroundImage: NetworkImage('https://image.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg'),
+            backgroundImage: NetworkImage(ImgURL),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),

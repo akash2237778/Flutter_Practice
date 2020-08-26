@@ -24,7 +24,6 @@ class _EmergencyContactsState extends State<EmergencyContacts> {
     setState(() {
       userStream = temp;
     });
-    print("we got the data + ${userStream.documents[0].data['Name']} this is name ");
 
   }
 
@@ -43,7 +42,7 @@ makeStream();
                   itemCount: userStream.documents.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return contactCard(name: userStream.documents[index].data['Name'], line: userStream.documents[index].data['About'], isAvailable: userStream.documents[index].data['Availability'] , number: userStream.documents[index].data['Pnumber'].toString());
+                    return contactCard(name: userStream.documents[index].data['Name'], line: userStream.documents[index].data['About'], isAvailable: userStream.documents[index].data['Availability'] , number: userStream.documents[index].data['Pnumber'].toString() , ImgURL: userStream.documents[index].data['ImgUrl'].toString());
                   },
                 ): Container(),
 

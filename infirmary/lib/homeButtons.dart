@@ -7,7 +7,7 @@ import 'main.dart';
 
 
 
-Container buttonPannel({IconData icon, String iconText , AssetImage iconImage, Color color=Colors.black}){
+Container buttonPannel({IconData icon, String iconText , AssetImage iconImage, Color color=Colors.black , String traffic}){
   return Container(
     child: Card(
       child: Column(
@@ -17,6 +17,10 @@ Container buttonPannel({IconData icon, String iconText , AssetImage iconImage, C
           icon != null ?
           Icon(icon, color: color, size: 80,): Image(image: iconImage, height: 80,width: 80,),
           SizedBox(height: 10,),
+          traffic != null ? Padding(
+            padding: EdgeInsets.only(bottom: 8.0),
+            child: Text(traffic, style: TextStyle(fontSize: 30),),
+          ): Container(),
           Text(iconText)
         ],
       ),

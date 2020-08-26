@@ -9,4 +9,13 @@ class DatabaseMethods{
         .collection(path)
         .getDocuments();
   }
+
+
+  addData(String collection, Map<String, dynamic> Data){
+
+    Firestore.instance.collection(collection)
+        .add(Data).catchError((e){
+      print(e.toString());
+    });
+  }
 }

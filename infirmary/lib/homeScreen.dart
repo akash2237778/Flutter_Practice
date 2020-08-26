@@ -1,7 +1,9 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:infirmary/AppBar.dart';
+import 'package:infirmary/Auth/Services/FirestoreService.dart';
 import 'package:infirmary/Drawer.dart';
 import 'package:infirmary/UrlLancher.dart';
 import 'HomeOperations/Emergency.dart';
@@ -15,8 +17,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  QuerySnapshot userData;
+  bool isOpen = false;
+  int traffic = 0;
+
+
+
+    void getData()async{
+
+      QuerySnapshot temp;
+      await DatabaseMethods().getStream('InfirmaryInfo').then((snapshots) {
+
+        temp = snapshots;
+
+      });
+      setState(() {
+        isOpen = temp.documents[0].data['isOpen'];
+        traffic = temp.documents[0].data['traffic'];
+      });
+  }
+
+
   @override
   Widget build(BuildContext context) {
+      getData();
     return Scaffold(
       floatingActionButton: Padding(
         padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.087),
@@ -111,12 +136,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             Expanded(
                                 child: buttonPannel(
                                     icon: Icons.open_in_browser,
-                                    color: Colors.green[400],
+                                    color: isOpen ? Colors.green[400] : Colors.black,
                                     iconText: 'Infirmary Status')),
                             Expanded(
                                 child: buttonPannel(
                                     icon: Icons.people,
-                                    iconText: 'Traffic')),
+                                    iconText: 'Live Traffic',
+                                traffic: traffic.toString())),
                           ],
                         ),
                       ),

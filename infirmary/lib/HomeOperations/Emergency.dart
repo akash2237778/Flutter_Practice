@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:infirmary/AppBar.dart';
+import 'package:infirmary/Auth/Services/FirestoreService.dart';
 import 'package:infirmary/Map.dart';
 import 'package:infirmary/UrlLancher.dart';
 import 'package:infirmary/main.dart';
@@ -22,6 +24,21 @@ class Emergency extends StatefulWidget {
 class _EmergencyState extends State<Emergency> {
   bool isLoading = false;
   LocationData locationData;
+  String emergencyContact;
+
+
+  void getData()async{
+
+    QuerySnapshot temp;
+    await DatabaseMethods().getStream('EmergencyContacts').then((snapshots) {
+
+      temp = snapshots;
+
+    });
+    setState(() {
+      emergencyContact = temp.documents[0].data['Pnumber'];
+    });
+  }
 
   void control() async {
     locationData = await Locate();
@@ -134,8 +151,8 @@ class _EmergencyState extends State<Emergency> {
                   padding: const EdgeInsets.all(2.0),
                   child: GestureDetector(
                     onTap: (){
-                      if(formKey.currentState.validate()){
-
+                      if(formKey.currentState.validate() && locationData != null){
+                            DatabaseMethods().addData('EmergencyAlerts', {'SAP' : user.email.split('@')[0], 'actionTaken': false, 'description' : textEditingController.text , 'latitude': locationData.latitude.toString() , 'longitude' : locationData.longitude.toString(), 'timeStamp' : DateTime.now().millisecondsSinceEpoch.toString() });
                       }
                     },
                     child: Container(
@@ -153,7 +170,7 @@ class _EmergencyState extends State<Emergency> {
                   padding: const EdgeInsets.all(2.0),
                   child: GestureDetector(
                     onTap: (){
-                      launchURL('tel://8882237778');
+                      launchURL('tel://'+ emergencyContact.toString());
                     },
                     child: Container(
                       alignment: Alignment.center,
