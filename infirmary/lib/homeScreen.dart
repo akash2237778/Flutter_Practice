@@ -1,11 +1,15 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:infirmary/AppBar.dart';
 import 'package:infirmary/Auth/Services/FirestoreService.dart';
 import 'package:infirmary/Drawer.dart';
+import 'package:infirmary/HomeOperations/BookAppointment.dart';
+import 'package:infirmary/HomeOperations/FirstaidScreen.dart';
 import 'package:infirmary/UrlLancher.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'HomeOperations/Emergency.dart';
 import 'HomeOperations/EmergencyContacts.dart';
 import 'homeButtons.dart';
@@ -21,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   QuerySnapshot userData;
   bool isOpen = false;
   int traffic = 0;
+  int rand = Random().nextInt(8);
 
 
 
@@ -94,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 4,
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -102,6 +107,45 @@ class _HomeScreenState extends State<HomeScreen> {
                       Expanded(
                         child: Row(
                           children: [
+                            Expanded(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Emergency()));
+                                  },
+                                  child: buttonPannel(
+                                      icon: Icons.local_hospital,
+                                      color: Colors.red,
+                                      iconText: 'Emergency'),
+                                )),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => BookAppointment()));
+                                },
+                                child: buttonPannel(
+                                    icon: Icons.book,
+                                    color: Colors.black,
+                                    iconText: 'Book Appointment'),
+                              ),
+                            ),
+
+
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => FirstAidScreen()));
+                                  },
+                                  child: buttonPannel(
+                                      icon: Icons.library_books,
+                                      iconText: 'First Aid'),
+                                )),
+
                             Expanded(
                               child: GestureDetector(
                                 onTap: (){
@@ -113,16 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     iconText: 'Emergency Contacts'),
                               ),
                             ),
-                            Expanded(
-                                child: GestureDetector(
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Emergency()));
-                                  },
-                                  child: buttonPannel(
-                                      icon: Icons.local_hospital,
-                                      color: Colors.red,
-                                      iconText: 'Emergency'),
-                                )),
+
                           ],
                         ),
                       ),
@@ -130,22 +165,65 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           children: [
                             Expanded(
-                                child: buttonPannel(
-                                    icon: Icons.library_books,
-                                    iconText: 'First Aid')),
+                                child: GestureDetector(
+                                  onTap: (){
+
+                                    Alert(
+                                      context: context,
+                                      type: isOpen ? AlertType.success: AlertType.error,
+                                      title: isOpen ? 'Status: OPEN' : 'Status: CLOSED',
+                                      buttons: [
+                                        DialogButton(
+                                          child: Text(
+                                            "OK",
+                                            style: TextStyle(color: Colors.white, fontSize: 20),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          color:  Colors.green,
+                                        ),
+
+                                      ],
+                                    ).show();
+
+                                  },
+                                  child: buttonPannel(
+                                      icon: Icons.open_in_browser,
+                                      color: isOpen ? Colors.green[400] : Colors.black,
+                                      iconText: isOpen ? 'Status: OPEN' : 'Status: CLOSED'),
+                                )),
                             Expanded(
-                                child: buttonPannel(
-                                    icon: Icons.open_in_browser,
-                                    color: isOpen ? Colors.green[400] : Colors.black,
-                                    iconText: 'Infirmary Status')),
-                            Expanded(
-                                child: buttonPannel(
-                                    icon: Icons.people,
-                                    iconText: 'Live Traffic',
-                                traffic: traffic.toString())),
+                                child: GestureDetector(
+                                  onTap: (){
+                                    Alert(
+                                      context: context,
+                                      type: AlertType.none,
+                                      title: 'Estimated waiting time :' + (traffic*10 + rand).toString(),
+                                      buttons: [
+                                        DialogButton(
+                                          child: Text(
+                                            "OK",
+                                            style: TextStyle(color: Colors.white, fontSize: 20),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          color:  Colors.green,
+                                        ),
+
+                                      ],
+                                    ).show();
+                                  },
+                                  child: buttonPannel(
+                                      icon: Icons.people,
+                                      iconText: 'Live Traffic',
+                                  traffic: traffic.toString()),
+                                )),
                           ],
                         ),
                       ),
+
 
                     ],
                   ),

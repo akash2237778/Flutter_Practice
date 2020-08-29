@@ -21,10 +21,20 @@ class _EmergencyContactsState extends State<EmergencyContacts> {
         temp = snapshots;
 
          });
-    setState(() {
-      userStream = temp;
-    });
 
+
+      setState(() {
+        if(temp != null)
+        userStream = temp;
+      });
+
+
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    userStream = null;
   }
 
 

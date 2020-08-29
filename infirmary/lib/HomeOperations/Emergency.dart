@@ -8,6 +8,7 @@ import 'package:infirmary/main.dart';
 import 'package:location/location.dart';
 import 'package:map/map.dart';
 import 'package:latlng/latlng.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../HelperFunctions.dart';
 import '../Location.dart';
@@ -95,7 +96,7 @@ class _EmergencyState extends State<Emergency> {
                             : "Description";
                       },
                       style: simpleTextStyle(),
-                      decoration: textFieldInputDecoration("Description"),
+                      decoration: textFieldInputDecoration("Land mark / Description"),
                       controller: textEditingController,
                     ),
                   ]),
@@ -153,6 +154,28 @@ class _EmergencyState extends State<Emergency> {
                     onTap: (){
                       if(formKey.currentState.validate() && locationData != null){
                             DatabaseMethods().addData('EmergencyAlerts', {'SAP' : user.email.split('@')[0], 'actionTaken': false, 'description' : textEditingController.text , 'latitude': locationData.latitude.toString() , 'longitude' : locationData.longitude.toString(), 'timeStamp' : DateTime.now().millisecondsSinceEpoch.toString() });
+
+                            Alert(
+                              context: context,
+                              type: AlertType.success,
+                              title: "Alert send successfully",
+                              buttons: [
+                                DialogButton(
+                                  child: Text(
+                                    "OK",
+                                    style: TextStyle(color: Colors.white, fontSize: 20),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                    textEditingController.clear();
+                                    phoneEditingController.clear();
+                                  },
+                                  color:  Colors.green,
+                                ),
+
+                              ],
+                            ).show();
+
                       }
                     },
                     child: Container(
